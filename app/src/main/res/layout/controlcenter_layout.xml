@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.IdentifyActivity">
+    tools:context=".activity.ControlcenterActivity">
 
     <include layout="@layout/bottomtool" />
 
@@ -13,16 +13,26 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button_identify_request"
+        android:id="@+id/button_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="信息审核" />
+        android:text="会议室状态设置" />
 
     <Button
-        android:id="@+id/button_permission"
+        android:id="@+id/button_report"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_identify_request"
-        android:text="权限设置" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="86dp"
+        android:text="会议室使用统计" />
+
+    <Button
+        android:id="@+id/button_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="165dp"
+        android:text="反馈信息查看" />
 </RelativeLayout>

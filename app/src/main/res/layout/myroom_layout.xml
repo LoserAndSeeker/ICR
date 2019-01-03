@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.IdentifyActivity">
+    tools:context=".activity.MyroomActivity">
 
     <include layout="@layout/bottomtool" />
 
@@ -13,16 +13,16 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button_identify_request"
+        android:id="@+id/button_reserved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="信息审核" />
+        android:text="已预订" />
 
     <Button
-        android:id="@+id/button_permission"
+        android:id="@+id/button_finished"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_identify_request"
-        android:text="权限设置" />
+        android:layout_below="@+id/button_reserved"
+        android:text="已完成" />
 </RelativeLayout>

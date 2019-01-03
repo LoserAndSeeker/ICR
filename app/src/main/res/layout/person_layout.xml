@@ -4,29 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginActivity">
+    tools:context=".activity.PersonalActivity">
+
+    <include layout="@layout/bottomtool" />
+
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_personalinformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注册账号" />
+        android:text="个人信息" />
 
     <Button
-        android:id="@+id/button_passwordrelative"
+        android:id="@+id/button_inform"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="86dp"
-        android:text="忘记密码" />
+        android:text="通知" />
 
     <Button
-        android:id="@+id/button_main"
+        android:id="@+id/button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="201dp"
+        android:text="注销账号" />
+
+    <Button
+        android:id="@+id/button_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="165dp"
-        android:text="登录" />
+        android:layout_marginTop="180dp"
+        android:text="退出登录" />
 </RelativeLayout>

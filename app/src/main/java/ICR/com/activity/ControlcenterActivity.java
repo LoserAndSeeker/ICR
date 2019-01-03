@@ -7,34 +7,34 @@ import android.view.View;
 import android.widget.Button;
 
 import ICR.com.R;
-
-public class LoginActivity extends BaseActivity {
+//会议室控制中心，详情请对照系统设计文档
+public class ControlcenterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
-        Button button1 = (Button) findViewById(R.id.button_main);
-        Button button2 = (Button) findViewById(R.id.button_register);
-        Button button3 = (Button) findViewById(R.id.button_passwordrelative);
+        setContentView(R.layout.controlcenter_layout);
+        Button button1 = (Button) findViewById(R.id.button_status);
+        Button button2 = (Button) findViewById(R.id.button_report);
+        Button button3 = (Button) findViewById(R.id.button_feedback);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
+                Intent intent = new Intent(ControlcenterActivity.this,  StatusActivity.class);
                 startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,  RegisterActivity.class);
+                Intent intent = new Intent(ControlcenterActivity.this,  ReportActivity.class);
                 startActivity(intent);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,  PasswordRelativeActivity.class);
+                Intent intent = new Intent(ControlcenterActivity.this,  FeedbackActivity.class);
                 startActivity(intent);
             }
         });

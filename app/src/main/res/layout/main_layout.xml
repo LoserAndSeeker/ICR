@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <!--下面这两个标签用来引用底部工具栏的（首页 二维码 我的）-->
+    <!--引用bottomtool.layout，修改样式请找这个布局文件-->
+    <include layout="@layout/bottomtool" />
+    <!--引用ToolsLayout.java，修改按钮响应事件请找这个java文件-->
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="会议室预定" />
+
+    <Button
+        android:id="@+id/button_myroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="86dp"
+        android:text="我的会议室" />
+
+    <Button
+        android:id="@+id/button_controlcenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="201dp"
+        android:text="控制中心" />
+
+    <Button
+        android:id="@+id/button_identify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:text="审核管理" />
+</RelativeLayout>

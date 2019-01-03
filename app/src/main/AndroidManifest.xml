@@ -16,17 +16,53 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.LogoutActivity" />
-        <activity android:name=".activity.PasswordRelativeActivity" />
-        <activity android:name=".activity.PersonalInformationActivity" />
-        <activity android:name=".activity.IdentifyActivity" />
-        <activity android:name=".activity.PermissionActivity" />
-        <activity android:name=".activity.FinishedActivity" />
-        <activity android:name=".activity.StatusActivity" />
-        <activity android:name=".activity.ReserveActivity" />
-        <activity android:name=".activity.FeedbackActivity"></activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="This is RegisterActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="This is LoginActivity" />
+        <activity
+            android:name=".activity.PasswordRelativeActivity"
+            android:label="This is PasswordRelativeActivity" />
+        <activity
+            android:name=".activity.PersonalInformationActivity"
+            android:label="This is PersonalInformationActivity" />
+        <activity
+            android:name=".activity.IdentifyActivity"
+            android:label="This is IdentifyActivity" />
+        <activity
+            android:name=".activity.PermissionActivity"
+            android:label="This is PermissionActivity" />
+        <activity
+            android:name=".activity.StatusActivity"
+            android:label="This is StatusActivity" />
+        <activity
+            android:name=".activity.ReserveActivity"
+            android:label="This is ReserveActivity" />
+        <activity
+            android:name=".activity.FeedbackActivity"
+            android:label="This is FeedbackActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="This is MainActivity" />
+        <activity
+            android:name=".activity.MyroomActivity"
+            android:label="This is MyroomActivity" />
+        <activity
+            android:name=".activity.ControlcenterActivity"
+            android:label="This is ControlcenterActivity" />
+        <activity
+            android:name=".activity.IdentifyRequestActivity"
+            android:label="This is IdentifyRequestActivity" />
+        <activity
+            android:name=".activity.ReportActivity"
+            android:label="This is ReportActivity" />
+        <activity
+            android:name=".activity.QRCodeActivity"
+            android:label="This is QRCodeActivity" />
+        <activity android:name=".activity.PersonalActivity" android:label="This is PersonalActivity"/>
+        <activity android:name=".activity.InformActivity" android:label="This is InformActivity"/>
     </application>
 
 </manifest>

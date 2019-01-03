@@ -24,7 +24,7 @@ public class EntranceActivity extends BaseActivity {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(EntranceActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(EntranceActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
