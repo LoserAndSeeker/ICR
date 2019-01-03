@@ -28,6 +28,6 @@ public class EntranceActivity extends BaseActivity {
                 startActivity(intent);
                 finish();
             }
-        };time.schedule(timerTask, 2000);//修改这个数字就可修改延迟时间
+        };time.schedule(timerTask, 1500);//修改这个数字就可修改延迟时间
     }
 }

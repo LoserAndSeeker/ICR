@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/button_main1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:text="首页" />
+        android:background="#D3D3D3"
+        >
 
-    <Button
-        android:id="@+id/button_QR_Code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="二维码" />
+        <Button
+            android:id="@+id/button_main1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="首页"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@mipmap/home"
+            android:paddingTop="10dp"
+            />
 
-    <Button
-        android:id="@+id/button_person"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:text="我的" />
+        <Button
+            android:id="@+id/button_QR_Code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扫一扫"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:drawableTop="@mipmap/qr"
+            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/button_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="我的"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/person2" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
 </RelativeLayout>

@@ -10,6 +10,6 @@
         android:id="@+id/image_entrance"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/entrance2"
+        app:srcCompat="@mipmap/entrance3"
         android:scaleType="fitXY"/>
 </android.support.constraint.ConstraintLayout>

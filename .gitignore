@@ -1,5 +1,8 @@
 *.iml
 .gradle
+/bin/
+/gen/
+project.properties
 /local.properties
 /.idea/libraries
 /.idea/modules.xml

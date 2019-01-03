@@ -45,7 +45,8 @@
             android:label="This is FeedbackActivity" />
         <activity
             android:name=".activity.MainActivity"
-            android:label="This is MainActivity" />
+            android:label="This is MainActivity"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".activity.MyroomActivity"
             android:label="This is MyroomActivity" />
@@ -61,7 +62,9 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
-        <activity android:name=".activity.PersonalActivity" android:label="This is PersonalActivity"/>
+        <activity android:name=".activity.PersonalActivity"
+            android:label="This is PersonalActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".activity.InformActivity" android:label="This is InformActivity"/>
     </application>
 
