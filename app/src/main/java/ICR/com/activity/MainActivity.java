@@ -49,5 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Log.d("nihao","1");
+        Log.d("wobianle","2");
     }
 }
