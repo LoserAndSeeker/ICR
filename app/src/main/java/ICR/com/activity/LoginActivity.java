@@ -14,6 +14,7 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
+        hindBar();
         Button button1 = (Button) findViewById(R.id.button_main);
         Button button2 = (Button) findViewById(R.id.button_register);
         Button button3 = (Button) findViewById(R.id.button_passwordrelative);
