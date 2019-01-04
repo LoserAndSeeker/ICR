@@ -8,14 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.yzq.zxinglibrary.android.CaptureActivity;
+
 import ICR.com.R;
+
+import static android.support.v4.app.ActivityCompat.startActivityForResult;
+
 //底部工具栏界面，就是“首页 二维码 我的”那一栏
 public class ToolsLayout extends LinearLayout {
 
     /**
      * 扫描跳转Activity RequestCode
      */
-    public static final int REQUEST_CODE = 111;
+    public static final int REQUEST_CODE_SCAN = 1;
     /**
      * 选择系统图片Request Code
      */
@@ -45,8 +50,10 @@ public class ToolsLayout extends LinearLayout {
         QR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,  QRCodeActivity.class);
-                context.startActivity(intent);
+             //   Intent intent = new Intent(context,  QRCodeActivity.class);
+               // context.startActivity(intent);
+                Intent intent = new Intent(context, CaptureActivity.class);
+               context.startActivity(intent);
             }
         });
         myTurn.setOnClickListener(new View.OnClickListener() {
