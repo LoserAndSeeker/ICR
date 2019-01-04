@@ -11,12 +11,30 @@ import android.widget.LinearLayout;
 import ICR.com.R;
 //底部工具栏界面，就是“首页 二维码 我的”那一栏
 public class ToolsLayout extends LinearLayout {
+
+    /**
+     * 扫描跳转Activity RequestCode
+     */
+    public static final int REQUEST_CODE = 111;
+    /**
+     * 选择系统图片Request Code
+     */
+    public static final int REQUEST_IMAGE = 112;
+
+    /**
+     * 请求CAMERA权限码
+     */
+    public static final int REQUEST_CAMERA_PERM = 101;
+
     public ToolsLayout(final Context context, AttributeSet attrs){
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.bottomtool,this);
         Button mainTurn = (Button) findViewById(R.id.button_main1);
         Button QR = (Button) findViewById(R.id.button_QR_Code);
         Button myTurn = (Button) findViewById(R.id.button_person);
+
+
+
         mainTurn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
