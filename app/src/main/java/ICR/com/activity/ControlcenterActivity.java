@@ -8,12 +8,13 @@ import android.widget.Button;
 
 import ICR.com.R;
 //会议室控制中心，详情请对照系统设计文档
-public class ControlcenterActivity extends AppCompatActivity {
+public class ControlcenterActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.controlcenter_layout);
+        hindBar();
         Button button1 = (Button) findViewById(R.id.button_status);
         Button button2 = (Button) findViewById(R.id.button_report);
         Button button3 = (Button) findViewById(R.id.button_feedback);
