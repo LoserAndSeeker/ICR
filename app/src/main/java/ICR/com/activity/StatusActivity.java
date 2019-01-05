@@ -19,8 +19,8 @@ import ICR.com.R;
 //会议室状态设置界面，管理员可以强制修改会议室状态，包括占用，空闲，故障三个状态，详情请对照系统设计文档
 public class StatusActivity extends BaseActivity {
     private static int id = 100;
-    public int i = 0;
-    public int flag[]=new int[100];
+    public int i = 0;//各个按钮的编号
+    public int flag[]=new int[100];//用来存储各个按钮的点击状态，可用或者不可用
     //private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
