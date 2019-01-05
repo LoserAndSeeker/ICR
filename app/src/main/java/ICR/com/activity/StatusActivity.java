@@ -20,6 +20,8 @@ import ICR.com.R;
 public class StatusActivity extends BaseActivity {
     private static int id = 100;
     public int i = 0;
+    public int flag[]=new int[100];
+    //private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +62,7 @@ public class StatusActivity extends BaseActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         tv.setText(str);
         tv.setTextColor(Color.argb(0xff, 0x00, 0x00, 0x00));
-        tv.setTextSize(20);
+        tv.setTextSize(30);
         tv.setLayoutParams(LP_WW);
         layout_sub_Lin.addView(tv);
 
@@ -70,17 +72,37 @@ public class StatusActivity extends BaseActivity {
         RL_MW.addRule(RelativeLayout.LEFT_OF,imageID);
         layout_root_relative.addView(layout_sub_Lin,RL_MW);
 
-
-        ImageView imageView = new ImageView(this);
+        Button button = new Button(this);
         RelativeLayout.LayoutParams RL_WW = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT);
-        imageView.setPadding(10, 10, 10, 10);
+        button.setPadding(10, 10, 30, 10);
         RL_WW.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        imageView.setLayoutParams(RL_WW);
-        imageView.setClickable(true);
-        imageView.setId(imageID);
-        imageView.setImageResource(R.mipmap.scoll2);
-        layout_root_relative.addView(imageView);
+        button.setLayoutParams(RL_WW);
+        button.setClickable(true);
+        button.setId(imageID);
+        button.setBackgroundResource(R.drawable.buttonstyle);
+        button.setText("可用");
+        button.setTextColor(Color.argb(0xff, 0x00, 0xcf, 0xff));
+        flag[i]=0;
+        final int j=i;
+        //final int flag=0;
+        final Button button1=button;
+         button.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                if(flag[j]==0){
+                    //android.widget.Toast.makeText(getApplicationContext(),j+":First",android.widget.Toast.LENGTH_SHORT).show();
+                    button1.setText("不可用");
+                }
+                else{
+                    //android.widget.Toast.makeText(getApplicationContext(),j+":Second",android.widget.Toast.LENGTH_SHORT).show();
+                    button1.setText("可用");
+                }
+                flag[j]=(flag[j]+1)%2;
+            }
+        });
+        layout_root_relative.addView(button);
 
         return layout_root_relative;
 
