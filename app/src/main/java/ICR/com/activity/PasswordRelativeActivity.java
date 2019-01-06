@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import ICR.com.R;
+import ICR.com.dao.ForgetPassword;
+import ICR.com.dao.name_equal_tel;
+
 //忘记密码界面，至于为什么是relative，抄的模板，详情请对照系统设计文档
 public class PasswordRelativeActivity extends BaseActivity {
 
@@ -18,14 +22,33 @@ public class PasswordRelativeActivity extends BaseActivity {
         setContentView(R.layout.passwordrelative_layout);
         hindBar();
         Button button1 = (Button) findViewById(R.id.button_finish);
+        final EditText et_password = (EditText) findViewById(R.id.password_edit);
+        final EditText et_name = (EditText) findViewById(R.id.name_edit);
+        final EditText et_tel = (EditText) findViewById(R.id.phone_edit);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+               final String nm=et_name.getText().toString();
+              final  String tl=et_tel.getText().toString();
+              final  String pw=et_password.getText().toString();
+                if (name_equal_tel.sendLoginRequest(tl,nm)==1)
+                {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            ForgetPassword.registerpost(tl,pw);
+                        }
+                    }).start();
+
+
+                    finish();
+                }
+                else
+                    Toast.makeText(PasswordRelativeActivity.this,"is no match",Toast.LENGTH_SHORT).show();
             }
         });
 
-        final EditText et_password = (EditText) findViewById(R.id.password_edit);
+
         final ImageButton bt_change_mode = (ImageButton) findViewById(R.id.imageButton2);
         bt_change_mode.setOnClickListener(new View.OnClickListener() {
             @Override

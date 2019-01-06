@@ -16,4 +16,7 @@ public class BaseActivity extends AppCompatActivity {
         if(actionbar!=null)
             actionbar.hide();
     }
+    //public static  String telnum;
+    public static String userTel;
+
 }
