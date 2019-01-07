@@ -74,13 +74,8 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
-<<<<<<< HEAD
-        <activity
-            android:name=".activity.PersonalActivity"
-            android:label="This is PersonalActivity" />
-        <activity
-            android:name=".activity.InformActivity"
-            android:label="This is InformActivity" />
+
+
         <activity
             android:name=".activity.suggestionActivity"
             android:label="This is suggestionActivity" />
@@ -89,12 +84,13 @@
             android:label="This is MainManagerActivity"/>
 
 
-=======
+
         <activity android:name=".activity.PersonalActivity"
             android:label="This is PersonalActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.InformActivity" android:label="This is InformActivity"/>
->>>>>>> a96e3ad6d8de5cd1cd3502e9394ded22ab7bbe8c
+        <activity android:name=".activity.InformActivity"
+            android:label="This is InformActivity"/>
+
     </application>
 
 </manifest>

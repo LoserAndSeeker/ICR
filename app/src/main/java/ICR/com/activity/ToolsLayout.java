@@ -35,16 +35,16 @@ public class ToolsLayout extends LinearLayout {
     public ToolsLayout(final Context context, AttributeSet attrs){
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.bottomtool,this);
-        ImageButton mainTurn = (ImageButton) findViewById(R.id.imageButton);
+        Button mainTurn = (Button) findViewById(R.id.button_main1);
         Button QR = (Button) findViewById(R.id.button_QR_Code);
-<<<<<<< HEAD
-        ImageButton myTurn = (ImageButton) findViewById(R.id.imageButton2);
-=======
-        Button myTurn = (Button) findViewById(R.id.button_person);
+
+       // ImageButton myTurn = (ImageButton) findViewById(R.id.imageButton2);
+
+       Button myTurn = (Button) findViewById(R.id.button_person);
 
 
 
->>>>>>> a96e3ad6d8de5cd1cd3502e9394ded22ab7bbe8c
+
         mainTurn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
