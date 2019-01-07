@@ -10,38 +10,143 @@
 
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+    </ICR.com.activity.ToolsLayout>
 
     <Button
-        android:id="@+id/button_personalinformation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="个人信息" />
+        android:id="@+id/button_suggestion"
+        android:layout_width="500dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/button_logout"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shapebutton"
+        android:drawableStart="@mipmap/ic_assignment_grey600_36dp"
+        android:drawableEnd="@mipmap/ic_chevron_right_grey600_36dp"
+        android:drawablePadding="16dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="10dp"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:text="意见反馈" />
 
     <Button
         android:id="@+id/button_inform"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/button_suggestion"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="86dp"
-        android:text="通知" />
+        android:background="@android:color/background_light"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:drawableEnd="@mipmap/ic_chevron_right_grey600_36dp"
+        android:drawableStart="@android:drawable/ic_input_get"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:textSize="16sp"
+        android:text="通知"/>
 
     <Button
         android:id="@+id/button_cancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="201dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/shapebutton"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:drawableEnd="@mipmap/ic_chevron_right_grey600_36dp"
+        android:drawableStart="@mipmap/ic_delete_grey600_36dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="10dp"
+
+        android:textSize="16sp"
         android:text="注销账号" />
 
     <Button
         android:id="@+id/button_logout"
+        android:layout_width="500dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/button_cancel"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/background_light"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:drawablePadding="18dp"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/ic_chevron_right_grey600_36dp"
+        android:paddingLeft="11dp"
+        android:paddingRight="5dp"
+
+        android:text="退出登录"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        app:srcCompat="@mipmap/ic_account_circle_black_48dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:text="点击更换头像"
+        android:textColor="#ffa3a5b5"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/buttonPerson"
+        android:layout_width="99dp"
+        android:layout_height="29dp"
+        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:text="编辑个人资料"
+        android:textColor="#ffa3a5b5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/buttonPerson"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:text="DOUDER"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="180dp"
-        android:text="退出登录" />
+        android:layout_below="@+id/imageButton4"
+        android:layout_marginStart="0dp"
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/haitun" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="19dp"
+        android:layout_height="27dp"
+        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_toEndOf="@+id/buttonPerson"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+
 </RelativeLayout>

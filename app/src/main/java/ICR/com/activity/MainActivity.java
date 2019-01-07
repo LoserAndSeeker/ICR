@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_layout);
         Button button1 = (Button) findViewById(R.id.button_reserve);
         Button button2 = (Button) findViewById(R.id.button_myroom);
-        Button button3 = (Button) findViewById(R.id.button_identify);
-        Button button4 = (Button) findViewById(R.id.button_controlcenter);
+       // Button button3 = (Button) findViewById(R.id.button_identify);
+        //Button button4 = (Button) findViewById(R.id.button_controlcenter);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        /*
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
         Log.d("nihao","1");
         Log.d("wobianle","2");
     }

@@ -6,13 +6,14 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import ICR.com.R;
-//通知界面，会议快要开始时通知参会者，详情请对照系统设计文档
-public class InformActivity extends AppCompatActivity {
+
+public class suggestionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inform_layout);
+        setContentView(R.layout.suggestion_activity);
+
         ImageButton imageButton1=(ImageButton) findViewById(R.id.imageButtonLeft);
 
         imageButton1.setOnClickListener(new View.OnClickListener() {
