@@ -4,12 +4,278 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PersonalInformationActivity">
+    tools:context=".activity.PersonalInformationActivity"
+    tools:layout_editor_absoluteY="25dp">
 
-    <include layout="@layout/bottomtool" />
+    <include
+        android:id="@+id/include2"
+        layout="@layout/bottomtool" />
 
     <ICR.com.activity.ToolsLayout
+        android:id="@+id/toolsLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+    </ICR.com.activity.ToolsLayout>
+
+    <TextView
+        android:id="@+id/information_Text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textColor="#ff000000"
+        android:textSize="24sp"
+        android:text="个人信息"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="基本信息"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_left_grey600_36dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="#66ccff"
+        android:textSize="18sp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="保存" />
+
+
+    <TextView
+        android:id="@+id/name_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="姓名" />
+
+    <TextView
+        android:id="@+id/name_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="xxx" />
+
+    <TextView
+        android:id="@+id/IDhao_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/name_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="ID号" />
+
+    <TextView
+        android:id="@+id/IDhao_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/name_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="233333333" />
+
+    <TextView
+        android:id="@+id/phone_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/IDhao_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="电话" />
+
+    <TextView
+        android:id="@+id/phone_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/IDhao_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="12843443533" />
+    <TextView
+        android:layout_width="382dp"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="更多信息"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/boyorgirl_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="290dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="性别" />
+
+    <EditText
+        android:id="@+id/boyorgirl_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:textSize="22sp"
+        android:gravity="start|center_vertical"
+        android:textColor="#ff000000"
+        android:hint="请输入性别"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="290dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/occupation_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/boyorgirl_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="340dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="职称" />
+
+    <EditText
+        android:id="@+id/occupation_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        android:hint="请输入职称"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/boyorgirl_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="340dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/email_Left"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/occupation_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="390dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="邮箱" />
+
+    <EditText
+        android:id="@+id/email_Right"
+        android:layout_width="282dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layerlist"
+        android:textColor="#ff000000"
+        android:textSize="22sp"
+        android:hint="请输入邮箱"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/occupation_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="390dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="382dp"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="440dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
 
 </android.support.constraint.ConstraintLayout>

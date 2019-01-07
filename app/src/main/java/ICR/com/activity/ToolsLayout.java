@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import ICR.com.R;
@@ -14,9 +15,9 @@ public class ToolsLayout extends LinearLayout {
     public ToolsLayout(final Context context, AttributeSet attrs){
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.bottomtool,this);
-        Button mainTurn = (Button) findViewById(R.id.button_main1);
+        ImageButton mainTurn = (ImageButton) findViewById(R.id.imageButton);
         Button QR = (Button) findViewById(R.id.button_QR_Code);
-        Button myTurn = (Button) findViewById(R.id.button_person);
+        ImageButton myTurn = (ImageButton) findViewById(R.id.imageButton2);
         mainTurn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

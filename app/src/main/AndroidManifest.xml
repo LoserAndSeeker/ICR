@@ -61,8 +61,20 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
-        <activity android:name=".activity.PersonalActivity" android:label="This is PersonalActivity"/>
-        <activity android:name=".activity.InformActivity" android:label="This is InformActivity"/>
+        <activity
+            android:name=".activity.PersonalActivity"
+            android:label="This is PersonalActivity" />
+        <activity
+            android:name=".activity.InformActivity"
+            android:label="This is InformActivity" />
+        <activity
+            android:name=".activity.suggestionActivity"
+            android:label="This is suggestionActivity" />
+        <activity
+            android:name=".activity.MainManagerActivity"
+            android:label="This is MainManagerActivity"/>
+
+
     </application>
 
 </manifest>
