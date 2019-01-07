@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.yzq.zxinglibrary.android.CaptureActivity;
@@ -36,7 +37,11 @@ public class ToolsLayout extends LinearLayout {
         LayoutInflater.from(context).inflate(R.layout.bottomtool,this);
         Button mainTurn = (Button) findViewById(R.id.button_main1);
         Button QR = (Button) findViewById(R.id.button_QR_Code);
-        Button myTurn = (Button) findViewById(R.id.button_person);
+
+       // ImageButton myTurn = (ImageButton) findViewById(R.id.imageButton2);
+
+       Button myTurn = (Button) findViewById(R.id.button_person);
+
 
 
 
