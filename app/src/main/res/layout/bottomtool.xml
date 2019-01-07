@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="wrap_content">
 
     <Button
@@ -30,4 +31,56 @@
         android:layout_marginEnd="13dp"
         app:srcCompat="@mipmap/ic_perm_identity_black_36dp" />
 
+=======
+    android:layout_height="wrap_content" >
+    <!--在RelativeLayout里嵌入LinearLayout-->
+    <!--上方灰线实际是改的LinearLayout的背景色，然后用白色button覆盖，再稍微调下margin-->
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#D3D3D3"
+        >
+
+        <Button
+            android:id="@+id/button_main1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="首页"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@mipmap/home"
+            android:paddingTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/button_QR_Code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扫一扫"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:drawableTop="@mipmap/qr"
+            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/button_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="我的"
+            android:textColor="#00CFFF"
+            android:background="#fff"
+            android:layout_marginTop="5dp"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/person2" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+>>>>>>> a96e3ad6d8de5cd1cd3502e9394ded22ab7bbe8c
 </RelativeLayout>

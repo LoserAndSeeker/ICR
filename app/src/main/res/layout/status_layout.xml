@@ -1,15 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".activity.StatusActivity">
 
     <include layout="@layout/bottomtool" />
 
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="会议室状态"
+        android:textSize="28dp"
+        android:paddingTop="25dp"
+        android:textColor="#00cfff"
+        android:gravity="center"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="65dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/list_Lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 动态生成部分开始
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@+id/image"
+                    android:background="#ff00ff00"
+                    android:orientation="horizontal"
+                    android:padding="5dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的第一个会议"
+                        android:textColor="#ff000000"
+                        android:textSize="20dip" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:padding="10dip"
+                    android:src="@mipmap/scoll2" />
+            </RelativeLayout>
+            动态生成部分结束-->
+
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/add_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/addroom2"/>
+
+</RelativeLayout>
