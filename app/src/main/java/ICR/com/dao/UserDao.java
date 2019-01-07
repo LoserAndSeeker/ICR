@@ -13,7 +13,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class UserDao {
+import ICR.com.activity.BaseActivity;
+
+public class UserDao extends BaseActivity{
     public static int sendLoginRequest(String tel,String password) {
                  int request=0;
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());//解决机型适配问题
@@ -74,12 +76,29 @@ public class UserDao {
 
                 String tl = jsonObject.getString("tel");//电话
                 String pw = jsonObject.getString("user_password");//密码
+                String nam=jsonObject.getString("sta_name");//员工姓名
+                String isad=jsonObject.getString("is_admin");//是否为管理员
+                String sti=jsonObject.getString("staff_id");  //员工id
+                String posi=jsonObject.getString("position");//员工职称
+                String emi=jsonObject.getString("email");//员工邮箱
+                String sx=jsonObject.getString("sex");//员工性别
+
 //                String english = jsonObject.getString("english");
                // String chinese = jsonObject.getString("chinese");
                // String philosophy = jsonObject.getString("philosophy");
                // Log.d("experiment",name+"'s grade "+math+" "+english+" "+chinese+" "+philosophy);
                 if(tl.equals(tel)&&pw.equals(password))
+                {
+                    static_user_name=nam;
+                    static_user_postition=posi;
+                    static_user_email=emi;
+                    static_user_sex=sx;
+                    static_user_id=sti;
+                    static_user_isadmin=isad;
+
+
                     return 1;
+                }
 
                 //   System.out.println("id" + id + ";name" + name + ";version" + version);
             }

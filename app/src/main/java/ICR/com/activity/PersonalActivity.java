@@ -23,6 +23,8 @@ public class PersonalActivity extends BaseActivity {
         Button button3 = (Button) findViewById(R.id.button_logout);
         Button button4 = (Button) findViewById(R.id.button_cancel);
         Button button5 = (Button) findViewById(R.id.buttonPerson);
+        Button button_name=(Button) findViewById(R.id.button3);
+        button_name.setText(static_user_name);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

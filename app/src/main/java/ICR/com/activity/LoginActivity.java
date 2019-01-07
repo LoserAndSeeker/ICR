@@ -32,10 +32,19 @@ public class LoginActivity extends BaseActivity {
                 String pw=password.getText().toString();
 
                 request=UserDao.sendLoginRequest(nm,pw);
-                if(request==1){
+                if(request==1)
+                {
                     userTel=nm;//记录用户名
-                Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
-                startActivity(intent);}
+                         if(static_user_isadmin.equals("1")){
+                        Intent intent=new Intent(LoginActivity.this,MainManagerActivity.class);
+                        startActivity(intent);
+                    }
+              else
+                   {
+                       Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
+                startActivity(intent);
+                   }
+                }
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {

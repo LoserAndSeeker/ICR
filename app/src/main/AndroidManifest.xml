@@ -81,7 +81,8 @@
             android:label="This is suggestionActivity" />
         <activity
             android:name=".activity.MainManagerActivity"
-            android:label="This is MainManagerActivity"/>
+            android:label="This is MainManagerActivity"
+            android:launchMode="singleTask"/>
 
 
 

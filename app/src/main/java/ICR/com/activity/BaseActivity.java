@@ -18,5 +18,10 @@ public class BaseActivity extends AppCompatActivity {
     }
     //public static  String telnum;
     public static String userTel;
-
+    public static String static_user_name;
+    public static String static_user_sex;
+    public static String static_user_postition;
+    public static String static_user_email;
+    public static String static_user_isadmin;
+    public static String static_user_id;
 }

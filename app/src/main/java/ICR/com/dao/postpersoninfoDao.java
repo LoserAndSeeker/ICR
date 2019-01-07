@@ -14,19 +14,22 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class registerDao {
-    static JSONObject jsoncontainer=new JSONObject();
-    public static void registerpost(String sta_name,String tel,String user_password){
+import ICR.com.activity.BaseActivity;
+
+public class postpersoninfoDao extends BaseActivity {
+ static JSONObject jsoncontainer=new JSONObject();
+    public static void changepost(String csex,String cposition,String cemail){
 
 
         try {
-            jsoncontainer.put("sta_name",sta_name);
-            jsoncontainer.put("tel",tel);
-            jsoncontainer.put("user_password",user_password);
+            jsoncontainer.put("tel",userTel);
+            jsoncontainer.put("sex",csex);
+            jsoncontainer.put("email",cemail);
+            jsoncontainer.put("position",cposition);
 //            jsoncontainer.put("chinese",chinese);
- //           jsoncontainer.put("philosophy",philosophy);
+            //           jsoncontainer.put("philosophy",philosophy);
             //  System.setOut(new PrintStream("D:/out.txt"));
-           // System.out.println("jsoncontainer's data"+jsoncontainer);
+            // System.out.println("jsoncontainer's data"+jsoncontainer);
         } catch (JSONException e) {
             e.printStackTrace();
         };
@@ -34,7 +37,7 @@ public class registerDao {
     }
     private static void executeHttpPost() {
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/register.php";
+        String path="http://192.168.43.210/ICR_connect/presoninfo_post.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();
@@ -43,23 +46,20 @@ public class registerDao {
             con.setUseCaches(false);
             con.setRequestMethod("POST");
             con.setRequestProperty("Connection", "keep-alive");
-           // con.setRequestProperty("Content-Type", "application/json;charset=UTF-8");//setRequestProperty设置http的请求头
-            //con.setRequestProperty("Accept-Language", "zh-CN");
-
 //           con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             con.connect();
 
             DataOutputStream out=new DataOutputStream(con.getOutputStream());
             //  InputStream in;
             //  in=out.OutputStream();
-           // out.writeBytes(jsoncontainer.toString());
-            out.write(jsoncontainer.toString().getBytes());     //上传中文数据
+            out.write(jsoncontainer.toString().getBytes());
+
             out.flush();
             out.close();
             //    int i=out.size();
             // Log.isLoggable("out.flush", i);
             System.out.println("jsoncontainer's data in connect"+jsoncontainer);
-           if (con.getResponseCode()==HttpURLConnection.HTTP_OK){
+            if (con.getResponseCode()==HttpURLConnection.HTTP_OK){
                 InputStream in=con.getInputStream();
                 BufferedReader br=new BufferedReader(new InputStreamReader(in));
                 StringBuilder sb=new StringBuilder();
@@ -67,7 +67,7 @@ public class registerDao {
                 while ((line=br.readLine())!=null){
                     sb.append(line+"\n");
                 }
-               // Log.i(TAG, "parseInfo: sb:"+sb.toString());//把错误输出来
+                // Log.i(TAG, "parseInfo: sb:"+sb.toString());//把错误输出来
                 //   byte [] buf=new byte[in.available()];
                 //in.read(buf);
                 //  String str=new String(buf);
@@ -84,3 +84,4 @@ public class registerDao {
         }
     }
 }
+
