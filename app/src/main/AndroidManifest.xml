@@ -4,14 +4,14 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".activity.EntranceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +57,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:label="This is MainActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".activity.MyroomActivity"
             android:label="This is MyroomActivity" />
@@ -74,10 +73,15 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
-        <activity android:name=".activity.PersonalActivity"
+        <activity
+            android:name=".activity.PersonalActivity"
             android:label="This is PersonalActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.InformActivity" android:label="This is InformActivity"/>
+        <activity
+            android:name=".activity.InformActivity"
+            android:label="This is InformActivity" />
+        <activity android:name=".activity.TimeSelectActivity" />
+        <activity android:name=".activity.SubmitReserveActivity"></activity>
     </application>
 
 </manifest>

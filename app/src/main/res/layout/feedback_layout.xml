@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feedback_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/reserved_info"
     tools:context=".activity.FeedbackActivity">
 
     <include layout="@layout/bottomtool" />
@@ -19,81 +19,83 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
 
-            android:layout_height="match_parent">
+            android:orientation="vertical">
+
             <Button
-                android:text="off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:onClick="off"
+                android:text="off" />
+
+            <Button
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
-            <Button
-                android:text="on"
                 android:onClick="on"
+                android:text="on" />
+
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button"/>
-            <Button
-                android:text="del"
                 android:onClick="del"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:text="del" />
+
             <Button
-                android:text="add"
-                android:onClick="add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:onClick="add"
+                android:text="add" />
+
             <TextView
                 android:id="@+id/room_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="一号会议室"
-                />
+                android:text="预定信息列表" />
 
             <LinearLayout
-                android:id="@+id/item_status"
-                android:orientation="vertical"
+                android:id="@+id/item_feedback"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/item_inner"
-                    android:orientation="horizontal"
+                    android:id="@+id/inner_feedback"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/tv_item1"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="30dp"
-                    android:text="时间"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    />
-                <TextView
-                    android:id="@+id/tv_item2"
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:text="会议名"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:id="@+id/tv_item3"
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:text="预约人"
-                    android:layout_weight="1"
-                    />
-                <TextView
-                    android:id="@+id/tv_item4"
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:text="管理"
-                    android:layout_weight="1"
-                    android:background="#fff"
-                    />
+                    <TextView
+                        android:id="@+id/tv_feedback_1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="时间"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="会议名" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_3"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:text="预约人" />
+
+                    <TextView
+                        android:id="@+id/tv_feedback_4"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:text="管理" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -101,6 +103,5 @@
         </LinearLayout>
 
 
-
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

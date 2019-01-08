@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ReportActivity">
-
-    <include layout="@layout/bottomtool" />
-
-    <ICR.com.activity.ToolsLayout
-        android:layout_width="match_parent"
+    android:orientation="vertical">
+    <!-- 顶一个SearchView -->
+    <SearchView
+        android:id="@+id/sv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+    <!-- 为SearchView定义自动补齐的ListView-->
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

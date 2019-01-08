@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import ICR.com.R;
 //反馈信息查看，用于查看系统自动进行会议室调度的反馈情况，详情请对照系统设计文档
 public class FeedbackActivity extends BaseActivity {
-    ConstraintLayout mConstraintLayout1;
+    RelativeLayout mRelativeLayout1;
     LinearLayout mLinearLayout2;
     int l2Height;//记录会议室预定信息列表的最下面的高度
     private int nowNumber;
@@ -28,8 +29,8 @@ public class FeedbackActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feedback_layout);
         hindBar();
-        mConstraintLayout1 = (ConstraintLayout) findViewById(R.id.reserved_info);
-        mLinearLayout2 = (LinearLayout) findViewById(R.id.item_status); //该会议室预定信息列表总表所在
+        mRelativeLayout1 = (RelativeLayout) findViewById(R.id.feedback_info);
+        mLinearLayout2 = (LinearLayout) findViewById(R.id.item_feedback); //该会议室预定信息列表总表所在
 
 
         mLinearLayout2.post(new Runnable() {
@@ -66,7 +67,7 @@ public class FeedbackActivity extends BaseActivity {
 
         nowNumber++;
         final View view = LayoutInflater.from(this).inflate(R.layout.item_1, null);
-        LinearLayout LinearLayout3 = (LinearLayout) view.findViewById(R.id.item_inner) ;
+        LinearLayout LinearLayout3 = (LinearLayout) view.findViewById(R.id.inner_feedback) ;
         TextView textView1 = (TextView) view.findViewById(R.id.tv_item1);
         TextView textView2 = (TextView) view.findViewById(R.id.tv_item2);
         TextView textView3 = (TextView) view.findViewById(R.id.tv_item3);

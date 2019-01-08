@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="40dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/room_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="1号会议室 位置：行政楼1楼"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/room_item_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="容量：40 多媒体设备：可用"
+        android:gravity="center"/>
+</LinearLayout>
