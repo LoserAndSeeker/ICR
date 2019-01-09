@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_status"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_item1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="30dp"
+        android:text="时间"
+
+        />
+    <TextView
+        android:id="@+id/tv_item2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="会议名"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/tv_item3"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="预约人"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/bt_item"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="管理"
+        android:layout_weight="1"
+        android:background="#fff"
+        />
+</LinearLayout>
