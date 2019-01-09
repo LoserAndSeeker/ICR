@@ -41,10 +41,12 @@
             android:label="This is PersonalInformationActivity" />
         <activity
             android:name=".activity.IdentifyActivity"
-            android:label="This is IdentifyActivity" />
+            android:label="This is IdentifyActivity"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".activity.PermissionActivity"
-            android:label="This is PermissionActivity" />
+            android:label="This is PermissionActivity"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".activity.StatusActivity"
             android:label="This is StatusActivity" />
@@ -98,11 +100,7 @@
 
 
 
-        <activity android:name=".activity.PersonalActivity"
-            android:label="This is PersonalActivity"
-            android:launchMode="singleTask" />
-        <activity android:name=".activity.InformActivity"
-            android:label="This is InformActivity"/>
+
 
 
     </application>

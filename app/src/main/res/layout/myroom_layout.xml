@@ -8,21 +8,82 @@
 
     <include layout="@layout/bottomtool" />
 
+
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!--<Button-->
+        <!--android:id="@+id/button_reserved"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="已预订" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_finished"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/button_reserved"-->
+        <!--android:text="已完成" />-->
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="21dp"
+        app:srcCompat="@mipmap/girl"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="35dp" />
+
     <Button
         android:id="@+id/button_reserved"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="已预订" />
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="381dp"
+        android:layout_height="105dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="152dp"
+        android:background="@drawable/myroomshape"
+        android:drawableLeft="@mipmap/bell"
+        android:drawablePadding="20dp"
+        android:drawableRight="@mipmap/righttwo"
+        android:gravity="center_vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="5dp"
+        android:text="已预定"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="281dp" />
 
     <Button
         android:id="@+id/button_finished"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="381dp"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true"
+
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button_reserved"
-        android:text="已完成" />
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/myroomshape"
+        android:drawableLeft="@mipmap/checkcircleone"
+        android:drawablePadding="20dp"
+        android:drawableRight="@mipmap/righttwo"
+        android:gravity="center_vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="5dp"
+        android:text="已完成"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+
+
+
 </RelativeLayout>

@@ -21,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="440dp"/>
 
-    <include layout="@layout/bottomtool" />
 
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"

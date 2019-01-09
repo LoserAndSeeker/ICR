@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import ICR.com.R;
 //审核管理页面，详情请对照系统设计文档
@@ -28,6 +29,14 @@ public class IdentifyActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(IdentifyActivity.this,  PermissionActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        ImageButton Identifyback= (ImageButton) findViewById(R.id.request_back2);
+        Identifyback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              finish();
             }
         });
     }

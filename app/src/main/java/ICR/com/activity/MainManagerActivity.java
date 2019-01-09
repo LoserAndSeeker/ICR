@@ -26,7 +26,7 @@ public class MainManagerActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        manage1.setOnClickListener(new View.OnClickListener() {
+        manage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainManagerActivity.this,  MyroomActivity.class);
