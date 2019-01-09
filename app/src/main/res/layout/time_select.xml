@@ -18,7 +18,7 @@
         android:id="@+id/Reserve_time"
         android:layout_width="match_parent"
         android:layout_height="450dp" />
-    
+
 
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 import ICR.com.R;
+import ICR.com.dao.croom_readDao;
+
 //通用类，如果有什么方法所有都能用，可以定义在这
 public class BaseActivity extends AppCompatActivity {
     public static String Static_Room;

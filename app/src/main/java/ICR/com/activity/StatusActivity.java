@@ -15,6 +15,8 @@ import ICR.com.ListView.Room2;
 import ICR.com.ListView.RoomAdapter;
 import ICR.com.ListView.StatusAdapter;
 import ICR.com.R;
+import ICR.com.dao.conference_set_statusDao;
+import ICR.com.dao.croom_readDao;
 
 /**
  * 会议室状态设置界面，管理员可以强制修改会议室状态，包括占用，空闲，故障三个状态，详情请对照系统设计文档
@@ -26,12 +28,13 @@ import ICR.com.R;
 
 public class StatusActivity extends BaseActivity {
     //该数组会从数据库读入，暂时做测试用
-    private String[][] room_info = {{"1","101","30","可用","行政楼1楼"},
+  /*  private String[][] room_info = {{"1","101","30","可用","行政楼1楼"},
             {"2","102","30","可用","行政楼1楼"},
             {"3","103","40","可用","行政楼2楼"},
             {"4","104","20","可用","行政楼3楼"},
             {"5","105","50","可用","行政楼4楼"},
-            {"6","106","30","可用","行政楼5楼"}};
+            {"6","106","30","可用","行政楼5楼"}};*/
+  String room_info[][];
     StatusAdapter adapter;
     ListView listView;
     private ArrayList<Room2> RoomList = new ArrayList<Room2>();
@@ -61,10 +64,27 @@ public class StatusActivity extends BaseActivity {
 
     //初始化RoomList，即上面提到的提取过程，将每一个房间的"101","30","可用","行政楼1楼"提取放入RoomList
     private void initRoomList(){
-        for(int i=0;i<room_info.length;i++){
-            Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4]);
-            RoomList.add(room);
-        }
+
+        new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        room_info= croom_readDao.sendLoginRequest();
+
+                        for(int i=0;i<5;i++)
+                        {
+                            System.out.println("   ：传递数据正常"+room_info[i][0]+"-"+room_info[i][1]+"-"+room_info[i][2]+"-"+room_info[i][3]+"-"+room_info[i][4]+"-"+room_info[i][5]);
+                        }
+
+                        for(int i=0;i<room_info.length;i++){
+                            Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4]);
+                            RoomList.add(room);
+                        }
+
+
+                    }
+                }).start();
+
     }
 
     /**
@@ -91,10 +111,20 @@ public class StatusActivity extends BaseActivity {
                 if(RoomList.get(x).getStatus().equals("可用")){
                     RoomList.get(x).setStatus("不可用");
                     room_info[x][3] = "不可用";
+
                 }else {
                     RoomList.get(x).setStatus("可用");
                     room_info[x][3] = "可用";
                 }
+                new Thread(
+                    new Runnable() {
+                        @Override
+                        public void run() {
+                            conference_set_statusDao.statuspost(RoomList.get(x).getName(),RoomList.get(x).getStatus());
+
+                        }
+                }).start();
+
                 adapter.notifyDataSetChanged();//更新预定信息列表
             }
         });
