@@ -32,6 +32,16 @@ public class BaseActivity extends AppCompatActivity {
             actionbar.hide();
     }
 
+    //public static  String telnum;
+    public static String userTel;
+    public static String static_user_name;
+    public static String static_user_sex;
+    public static String static_user_postition;
+    public static String static_user_email;
+    public static String static_user_isadmin;
+    public static String static_user_id;
+
+
     //取"2019-1-1 09:00:00"中的"2019-1-1"
     public static String getDate(String time){
         int x = time.indexOf(" ");
@@ -45,4 +55,5 @@ public class BaseActivity extends AppCompatActivity {
         return time.substring(x+1);
         //System.out.println(date+clock);
     }
+
 }

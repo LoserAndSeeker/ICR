@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import ICR.com.R;
+import ICR.com.dao.registerDao;
+import ICR.com.dao.register_repeat_Dao;
 
 public class RegisterActivity extends BaseActivity {
 
@@ -17,15 +20,34 @@ public class RegisterActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_layout);
         hindBar();
+        final EditText et_password = (EditText) findViewById(R.id.register_password);
+        final EditText et_name = (EditText) findViewById(R.id.register_name);
+        final EditText et_phone = (EditText) findViewById(R.id.register_phone);
+        final ImageButton bt_change_mode1 = (ImageButton) findViewById(R.id.imageButton3);
         Button button1 = (Button) findViewById(R.id.register_finish);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-            }
+               final String nm=et_name.getText().toString();
+                final String pw=et_password.getText().toString();
+                final String ph=et_phone.getText().toString();
+                if(register_repeat_Dao.sendLoginRequest(ph)==1){
+                    Toast.makeText(RegisterActivity.this,"phone number is already existed",Toast.LENGTH_SHORT).show();}
+
+                if(register_repeat_Dao.sendLoginRequest(ph)==0){
+                new Thread(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                registerDao.registerpost(nm,ph,pw);//获取数据的功能，方法时http
+                            }
+                        }
+
+                ).start();
+               finish();
+            }}
         });
-        final EditText et_password = (EditText) findViewById(R.id.register_password);
-        final ImageButton bt_change_mode1 = (ImageButton) findViewById(R.id.imageButton3);
+
         bt_change_mode1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

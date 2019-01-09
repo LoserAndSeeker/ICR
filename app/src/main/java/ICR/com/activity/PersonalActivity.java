@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 import ICR.com.R;
+import ICR.com.dao.LogoutDao;
+
 //“我的”界面，详情请对照系统设计文档
 public class PersonalActivity extends BaseActivity {
 
@@ -21,6 +23,8 @@ public class PersonalActivity extends BaseActivity {
         Button button3 = (Button) findViewById(R.id.button_logout);
         Button button4 = (Button) findViewById(R.id.button_cancel);
         Button button5 = (Button) findViewById(R.id.buttonPerson);
+        Button button_name=(Button) findViewById(R.id.button3);
+        button_name.setText(static_user_name);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +73,9 @@ public class PersonalActivity extends BaseActivity {
                 dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+
+                        LogoutDao.logoutPost();
+
                         Intent intent = new Intent(PersonalActivity.this, LoginActivity.class);
                         startActivity(intent);
                     }

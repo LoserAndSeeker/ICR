@@ -16,7 +16,7 @@ import ICR.com.R;
 import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 //底部工具栏界面，就是“首页 二维码 我的”那一栏
-public class ToolsLayout extends LinearLayout {
+public class ToolsLayout extends LinearLayout  {
 
     /**
      * 扫描跳转Activity RequestCode
@@ -48,8 +48,12 @@ public class ToolsLayout extends LinearLayout {
         mainTurn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,  MainActivity.class);
+                if (BaseActivity.static_user_isadmin.equals("1")){
+                Intent intent = new Intent(context,  MainManagerActivity.class);
                 context.startActivity(intent);//与一般的显示有点区别，请照着写
+            }else {Intent intent = new Intent(context,  MainActivity.class);
+                    context.startActivity(intent);
+                }
             }
         });
         QR.setOnClickListener(new View.OnClickListener() {
