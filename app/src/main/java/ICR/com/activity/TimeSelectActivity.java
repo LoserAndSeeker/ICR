@@ -15,9 +15,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import ICR.com.ListView.Room2;
 import ICR.com.ListView.Time2;
 import ICR.com.ListView.TimeAdapter;
 import ICR.com.R;
+import ICR.com.dao.conference_readDao;
+import ICR.com.dao.croom_readDao;
 
 /**
  * rs_info代表从数据库传入的时间信息，是二维数组，内部数据每一行是这样的{"1","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","101"}
@@ -28,7 +31,7 @@ import ICR.com.R;
  */
 public class TimeSelectActivity extends BaseActivity {
     //到时候由数据库传入，这里仅作测试用
-    private String[][] rs_info = {{"1","财务部会议","老黎","2019-01-01 08:00:00","2019-01-01 08:00:00","2019-01-01 09:00:00","101"},
+   /* private String[][] rs_info = {{"1","财务部会议","老黎","2019-01-01 08:00:00","2019-01-01 08:00:00","2019-01-01 09:00:00","101"},
             {"2","财务部会议","老高","2019-01-01 08:00:00","2019-01-01 09:00:00","2019-01-01 10:00:00","101"},
             {"3","财务部会议","老黎","2019-01-01 08:00:00","2019-01-02 14:00:00","2019-01-02 15:00:00","101"},
             {"4","财务部会议","老黎","2019-01-04 08:00:00","2019-01-01 08:00:00","2019-01-01 09:00:00","102"},
@@ -40,7 +43,8 @@ public class TimeSelectActivity extends BaseActivity {
             {"10","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","106"},
             {"11","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","106"},
             {"12","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","107"},
-            {"13","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","108"}};
+            {"13","财务部会议","老黎","2019-1-1 08:00:00","2019-1-1 08:00:00","2019-1-1 09:00:00","108"}};*/
+   String rs_info[][];
     TimeAdapter adapter;
     ListView listView;
     private ArrayList<Time2> TimeList = new ArrayList<Time2>();
@@ -111,31 +115,40 @@ public class TimeSelectActivity extends BaseActivity {
 
     //初始化TimeList，即上面提到的提取过程，
     private void initTimeList(){
-        TimeList.clear();
-        for(int j=0;j<Clock.length;j++) {
-            Time2 time = null;
-            int flag = 1;
-            for (int i = 0; i < rs_info.length; i++) {
-                String date = null, clock1 = null, clock2 = null;
-                date = getDate(rs_info[i][4]);//会议开始日期
-                clock1 = getClock(rs_info[i][4]);//会议该日期下开始时间
-                clock2 = getClock(rs_info[i][5]);//会议该日期下结束时间
-                //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
-                // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
-                if(Static_Room.equals(rs_info[i][6] ) && Static_Date.equals(date)  && Clock[j].equals(clock1+"-"+clock2)){
-                    flag = 0;
-                    //System.out.println(rs_info[i][6]+"??"+date+"??"+(clock1+"-"+clock2));
-                }
+        new Thread(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        rs_info= conference_readDao.sendLoginRequest();
+                    //  System.out.println("这是reinfo   ：：："+rs_info[1][4]+"结束时间："+rs_info[1][5]+"room_name:::"+rs_info[1][6]);
+                        TimeList.clear();
+                        for(int j=0;j<Clock.length;j++) {
+                            Time2 time = null;
+                            int flag = 1;
+                            for (int i = 0; i < rs_info.length; i++) {
+                                String date = null, clock1 = null, clock2 = null;
+                                date = getDate(rs_info[i][4]);//会议开始日期
+                                clock1 = getClock(rs_info[i][4]);//会议该日期下开始时间
+                                clock2 = getClock(rs_info[i][5]);//会议该日期下结束时间
+                                //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
+                                // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
+                                if(Static_Room.equals(rs_info[i][6] ) && Static_Date.equals(date)  && Clock[j].equals(clock1+"-"+clock2)){
+                                    flag = 0;
+                                    //System.out.println(rs_info[i][6]+"??"+date+"??"+(clock1+"-"+clock2));
+                                }
 
-            }
-            //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
-            // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
-            if(flag==1)
-                time = new Time2(Clock[j],"可预订");
-            else
-                time = new Time2(Clock[j],"已预订");
-            TimeList.add(time);
-        }
+                            }
+                            //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
+                            // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
+                            if(flag==1)
+                                time = new Time2(Clock[j],"可预订");
+                            else
+                                time = new Time2(Clock[j],"已预订");
+                            TimeList.add(time);
+                        }
+                    }
+                }).start();
+
     }
 
     /**

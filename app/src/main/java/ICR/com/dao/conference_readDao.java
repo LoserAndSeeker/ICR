@@ -14,8 +14,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class conference_readDao {
-    public static int sendLoginRequest() {
-        int request=0;
+    public static String[][] sendLoginRequest() {
+
+        String[][] request=new String [1][1];
+        request[0][0]="conference read error";
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());//解决机型适配问题
         HttpURLConnection connection=null;
         BufferedReader reader = null;
@@ -32,7 +34,8 @@ public class conference_readDao {
             while((line = reader.readLine())!=null){
                 response.append(line);
             }
-            parseJSONWithJSONObject(response.toString());
+          String backstr[][]=  parseJSONWithJSONObject(response.toString());
+            return backstr;
         }
 
         catch (Exception e)  {e.printStackTrace();}
@@ -60,7 +63,7 @@ public class conference_readDao {
 
             JSONObject JsonObject = new JSONObject(jsonData);//类似二维数组
              JSONArray gradeObject = JsonObject.getJSONArray("conference");
-            String [][] conferencedata = new String [gradeObject.length()][7];
+            String [][] conferencedata = new String [gradeObject.length()][8];
 
             for (int i=0; i < gradeObject.length(); i++)    {
 
@@ -71,14 +74,12 @@ public class conference_readDao {
                 conferencedata[i][3] = jsonObject.getString("order_time");
                 conferencedata[i][4] = jsonObject.getString("start_time");
                 conferencedata[i][5] = jsonObject.getString("end_time");
-                conferencedata[i][6]=jsonObject.getString("ro_id");
+                conferencedata[i][6]=jsonObject.getString("room_name");
+                conferencedata[i][7]=jsonObject.getString("ro_id");
 
 
-                // Log.d("experiment",name+"'s grade "+math+" "+english+" "+chinese+" "+philosophy);
-
-
-                //   System.out.println("id" + id + ";name" + name + ";version" + version);
             }
+            System.out.println("这是conference赋值"+conferencedata[1][2]);
             return conferencedata;
         }
         catch (Exception e)

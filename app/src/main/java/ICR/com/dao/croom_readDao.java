@@ -14,8 +14,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class croom_readDao{
-    public static int sendLoginRequest() {
-        int request=0;
+    public static String[][] sendLoginRequest() {
+       // int request=0;
+        String[][] request=new String [1][1];
+        request[0][0]="croom read error";
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());//解决机型适配问题
         HttpURLConnection connection=null;
         BufferedReader reader = null;
@@ -32,7 +34,9 @@ public class croom_readDao{
             while((line = reader.readLine())!=null){
                 response.append(line);
             }
-            parseJSONWithJSONObject(response.toString());
+            String backstr[][]=parseJSONWithJSONObject(response.toString());
+            System.out.println("这是测试数据：：："+backstr[1][2]);
+            return backstr;
         }
 
         catch (Exception e)  {e.printStackTrace();}
@@ -59,7 +63,7 @@ public class croom_readDao{
         {
 
             JSONObject JsonObject = new JSONObject(jsonData);//类似二维数组
-            JSONArray gradeObject = JsonObject.getJSONArray("conference");
+            JSONArray gradeObject = JsonObject.getJSONArray("croom");
             String [][] croom = new String [gradeObject.length()][6];
 
             for (int i=0; i < gradeObject.length(); i++)    {
@@ -69,7 +73,7 @@ public class croom_readDao{
                 croom[i][1]= jsonObject.getString("room_name");//电话
                 croom[i][2] = jsonObject.getString("capacity");//密码
                 croom[i][3] = jsonObject.getString("authority");
-                croom[i][4] = jsonObject.getString("address");
+                croom[i][4] = jsonObject.getString("adress");
                 croom[i][5] = jsonObject.getString("equipment");
 
 
@@ -79,6 +83,7 @@ public class croom_readDao{
 
                 //   System.out.println("id" + id + ";name" + name + ";version" + version);
             }
+            System.out.println("请求获取croom ：  "+croom[1][2]);
             return croom;
         }
         catch (Exception e)
