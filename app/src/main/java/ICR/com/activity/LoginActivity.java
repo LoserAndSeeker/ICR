@@ -30,7 +30,6 @@ public class LoginActivity extends BaseActivity {
                 int request=0;
                 String nm=user.getText().toString();
                 String pw=password.getText().toString();
-
                 request=UserDao.sendLoginRequest(nm,pw);
                 if(request==1)
                 {

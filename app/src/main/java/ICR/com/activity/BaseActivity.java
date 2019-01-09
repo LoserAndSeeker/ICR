@@ -24,4 +24,6 @@ public class BaseActivity extends AppCompatActivity {
     public static String static_user_email;
     public static String static_user_isadmin;
     public static String static_user_id;
+    //public static String a[][];
+  //  public Static String
 }
