@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,5 +11,200 @@
     <ICR.com.activity.ToolsLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/rec"
 
-</android.support.constraint.ConstraintLayout>
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_alignBottom="@+id/button8"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <ImageButton
+        android:id="@+id/request_back"
+        android:layout_width="79dp"
+        android:layout_height="86dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_left_grey600_36dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/rec"
+        android:layout_below="@+id/textview4"
+        android:text="新密码："
+        android:textSize="23sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/rec"
+        android:layout_below="@+id/textview5"
+        android:text="手机号："
+        android:textSize="23sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="92dp"
+        android:layout_height="41dp"
+        android:layout_alignStart="@+id/rec"
+        android:layout_below="@+id/textview2"
+        android:text="邮箱："
+        android:textSize="23sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <TextView
+        android:id="@+id/textview5"
+        android:layout_width="93dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/rec"
+        android:layout_marginTop="213dp"
+        android:text="姓名："
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="329dp" />
+
+    <TextView
+        android:id="@+id/textview7"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textview5"
+        android:layout_alignStart="@+id/rec"
+        android:layout_marginBottom="-210dp"
+        android:text="ID号："
+        android:textSize="23sp"
+   />
+
+    <TextView
+        android:id="@+id/textview8"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="信息审核"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/button9"
+        android:layout_marginEnd="70dp"
+
+        android:text="同意"
+         />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="50dp"
+        android:text="拒绝"
+
+         />
+
+    <EditText
+        android:id="@+id/edit_text1"
+        android:layout_width="263dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textview2"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/textview"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="127dp" />
+
+    <EditText
+        android:id="@+id/edit_text2"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/rec"
+        android:layout_alignTop="@+id/textview5"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <EditText
+        android:id="@+id/edit_text3"
+        android:layout_width="230dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/textview"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <EditText
+        android:id="@+id/edit_text7"
+        android:layout_width="263dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/textview"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="263dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textview5"
+        android:layout_alignEnd="@+id/rec"
+        android:layout_marginBottom="-213dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <EditText
+        android:id="@+id/edit_text5"
+        android:layout_width="264dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textview"
+        android:layout_marginStart="-1dp"
+        android:layout_toEndOf="@+id/textview"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="329dp" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="524dp" />
+
+
+
+</RelativeLayout>
