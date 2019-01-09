@@ -16,14 +16,16 @@ public class PersonalActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.person_layout);
-        Button button1 = (Button) findViewById(R.id.button_personalinformation);
+        Button button1 = (Button) findViewById(R.id.button_suggestion);
         Button button2 = (Button) findViewById(R.id.button_inform);
         Button button3 = (Button) findViewById(R.id.button_logout);
         Button button4 = (Button) findViewById(R.id.button_cancel);
+        Button button5 = (Button) findViewById(R.id.buttonPerson);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PersonalActivity.this,  PersonalInformationActivity.class);
+
+                Intent intent = new Intent(PersonalActivity.this,  suggestionActivity.class);
                 startActivity(intent);
             }
         });
@@ -78,6 +80,14 @@ public class PersonalActivity extends BaseActivity {
                     }
                 });
                 dialog.show();
+            }
+        });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PersonalActivity.this,PersonalInformationActivity.class);
+                startActivity(intent);
             }
         });
     }

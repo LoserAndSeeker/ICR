@@ -73,6 +73,7 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
+<<<<<<< HEAD
         <activity
             android:name=".activity.PersonalActivity"
             android:label="This is PersonalActivity"
@@ -82,6 +83,25 @@
             android:label="This is InformActivity" />
         <activity android:name=".activity.TimeSelectActivity" />
         <activity android:name=".activity.SubmitReserveActivity"></activity>
+=======
+
+
+        <activity
+            android:name=".activity.suggestionActivity"
+            android:label="This is suggestionActivity" />
+        <activity
+            android:name=".activity.MainManagerActivity"
+            android:label="This is MainManagerActivity"/>
+
+
+
+        <activity android:name=".activity.PersonalActivity"
+            android:label="This is PersonalActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.InformActivity"
+            android:label="This is InformActivity"/>
+
+>>>>>>> 52cbd141b777847ad33fc88ff96236d13c973e17
     </application>
 
 </manifest>

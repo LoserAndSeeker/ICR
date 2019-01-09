@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.suggestionActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/inform"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="意见反馈"
+        android:textColor="#ff000000"
+        android:textSize="24sp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/imageButtonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_left_grey600_36dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:gravity="start"
+        android:hint="请在这里输入遇到的问题或者建议:"
+        android:textSize="16sp"
+        android:background="@drawable/round"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/yuan"
+        android:text="提交"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
