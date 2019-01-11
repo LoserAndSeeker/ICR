@@ -41,6 +41,7 @@ public class PersonalInformationActivity extends BaseActivity {
 
 
 
+
         curname.setText(static_user_name);
         curid.setText(static_user_id);
         curtel.setText(userTel);

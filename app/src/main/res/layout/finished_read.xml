@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    >
+    tools:context=".activity.FinishedReadActivity">
 
-    <Button
-        android:id="@+id/select_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2019-01-10" />
-
-    <ListView
-        android:id="@+id/Reserve_time"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="450dp" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:text="签到详情"
+        android:textColor="#00cfff"
+        android:textSize="28dp" />
+
 
 
     <ICR.com.activity.ToolsLayout

@@ -5,19 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    >
+  >
 
-    <Button
-        android:id="@+id/select_date"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2019-01-10" />
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:text="您已完成"
+        android:textColor="#00cfff"
+        android:textSize="28dp" />
 
     <ListView
-        android:id="@+id/Reserve_time"
+        android:id="@+id/Finished_confer"
         android:layout_width="match_parent"
-        android:layout_height="450dp" />
+        android:layout_margin="20dp"
+        android:layout_height="400dp"/>
 
 
     <ICR.com.activity.ToolsLayout

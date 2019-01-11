@@ -71,7 +71,7 @@ public class register_repeat_Dao {
             for (int i=0; i < gradeObject.length(); i++)    {
 
                 JSONObject jsonObject = gradeObject.getJSONObject(i);
-
+                String sn = jsonObject.getString("sta_name");//用户名
                 String us = jsonObject.getString("tel");//用户名
                 String pw = jsonObject.getString("user_password");//密码
 //                String english = jsonObject.getString("english");
@@ -80,6 +80,8 @@ public class register_repeat_Dao {
                 // Log.d("experiment",name+"'s grade "+math+" "+english+" "+chinese+" "+philosophy);
                 if(us.equals(tel))
                     return 1;
+                if(sn.equals(tel))
+                    return 2;
 
                 //   System.out.println("id" + id + ";name" + name + ";version" + version);
             }

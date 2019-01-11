@@ -38,36 +38,24 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <TextView
-        android:id="@+id/informationkk"
-        android:layout_width="382dp"
-        android:layout_height="130dp"
-        android:background="@drawable/layerlist"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="70dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+
+
     <TextView
         android:id="@+id/informationText1"
-        android:layout_width="362dp"
+        android:layout_width="match_parent"
         android:layout_height="130dp"
         android:textColor="#66f"
-        android:text="【智能会议室】亲爱的用户：您已预订1号会议室，使用时间为1月15日上午8:00-10:00，若8:20分前未使用，系统将自动为您取消预订，如已使用，请忽略此信息。"
+        android:text="【智能会议室】您已预订1号会议室，使用时间为1月15日上午8:00-10:00，若8:20分前未使用，系统将自动为您取消预订，如已使用，请忽略此信息。"
         android:gravity="center_vertical"
         android:textSize="18sp"
-        android:layout_marginStart="10dp"
+        android:background="@drawable/noneshape"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-        android:layout_width="382dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="200dp"
-        android:background="#aaa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
 
 </android.support.constraint.ConstraintLayout>

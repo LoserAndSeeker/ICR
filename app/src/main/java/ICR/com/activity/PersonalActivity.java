@@ -24,6 +24,16 @@ public class PersonalActivity extends BaseActivity {
         Button button4 = (Button) findViewById(R.id.button_cancel);
         Button button5 = (Button) findViewById(R.id.buttonPerson);
         Button button_name=(Button) findViewById(R.id.button3);
+
+
+
+       /* String img_path = "/storage/emulated/0/DCIM/Camera/IMG_20181230_222737.jpg";
+        android.graphics.Bitmap bmp= android.graphics.BitmapFactory.decodeFile(img_path);
+        android.widget.ImageView iv= (android.widget.ImageView)findViewById(R.id.imageButton4);
+        iv.setImageBitmap(bmp);*/
+
+
+
         button_name.setText(static_user_name);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +62,7 @@ public class PersonalActivity extends BaseActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent = new Intent(PersonalActivity.this, LoginActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 });
                 dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
@@ -61,6 +72,7 @@ public class PersonalActivity extends BaseActivity {
                     }
                 });
                 dialog.show();
+
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import ICR.com.R;
 //会议室控制中心，详情请对照系统设计文档
@@ -28,15 +29,17 @@ public class ControlcenterActivity extends BaseActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ControlcenterActivity.this,  ReportActivity.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(ControlcenterActivity.this,  ReportActivity.class);
+                startActivity(intent);*/
+                showToast(ControlcenterActivity.this,"前方道路正在施工",500);
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ControlcenterActivity.this,  FeedbackActivity.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(ControlcenterActivity.this,  FeedbackActivity.class);
+                startActivity(intent);*/
+                showToast(ControlcenterActivity.this,"前方道路也在施工",500);
             }
         });
     }
