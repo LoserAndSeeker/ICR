@@ -14,6 +14,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
+
 public class ForgetPassword {
     static JSONObject jsonforget=new JSONObject();
     public static void registerpost(String tel,String user_password){
@@ -34,7 +36,7 @@ public class ForgetPassword {
 }
     private static void executeHttpPost() {
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/forgetpassword.php";
+        String path=static_connect+"forgetpassword.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();

@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
+
 public class conference_readDao {
     public static String[][] sendLoginRequest() {
 
@@ -22,7 +24,7 @@ public class conference_readDao {
         HttpURLConnection connection=null;
         BufferedReader reader = null;
         try {
-            URL url = new URL("http://192.168.43.210/ICR_connect/conference_read.php");
+            URL url = new URL(static_connect+"conference_read.php");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(8000);

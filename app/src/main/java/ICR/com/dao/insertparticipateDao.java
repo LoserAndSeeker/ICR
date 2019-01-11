@@ -14,6 +14,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
+
 public class insertparticipateDao {
     static JSONObject jsoncontainer=new JSONObject();
     public static void registerpost(String room_id,String s_time,String joinname){
@@ -38,7 +40,7 @@ public class insertparticipateDao {
     }
     private static void executeHttpPost() {
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/insertparticipate.php";
+        String path=static_connect+"insertparticipate.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();

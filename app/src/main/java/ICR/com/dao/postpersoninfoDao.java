@@ -37,7 +37,7 @@ public class postpersoninfoDao extends BaseActivity {
     }
     private static void executeHttpPost() {
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/presoninfo_post.php";
+        String path=static_connect+"presoninfo_post.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();

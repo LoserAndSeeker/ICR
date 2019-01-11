@@ -85,12 +85,13 @@
         android:textSize="16sp" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/iv_personal_icon"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_weight="1"
+        android:onClick="showChoosePicDialog"
         app:srcCompat="@mipmap/ic_account_circle_black_48dp"
         android:background="@android:color/white"
          />
@@ -112,7 +113,7 @@
         android:id="@+id/buttonPerson"
         android:layout_width="99dp"
         android:layout_height="29dp"
-        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_alignBottom="@+id/iv_personal_icon"
         android:layout_alignParentStart="true"
         android:layout_marginStart="27dp"
         android:layout_weight="1"
@@ -139,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageButton4"
+        android:layout_below="@+id/iv_personal_icon"
         android:layout_marginStart="0dp"
         android:layout_weight="1"
         app:srcCompat="@mipmap/haitun" />
@@ -148,7 +149,7 @@
         android:id="@+id/imageView3"
         android:layout_width="19dp"
         android:layout_height="27dp"
-        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_alignBottom="@+id/iv_personal_icon"
         android:layout_toEndOf="@+id/buttonPerson"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 

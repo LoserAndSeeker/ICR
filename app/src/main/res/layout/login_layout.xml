@@ -117,8 +117,9 @@
             android:id="@+id/account_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="账号"
-            android:inputType="textVisiblePassword" />
+            android:hint="手机号"/>
+            <!--android:inputType="textVisiblePassword"-->
+
     </android.support.design.widget.TextInputLayout>
 
     <ImageButton

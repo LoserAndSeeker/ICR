@@ -126,8 +126,8 @@
             android:id="@+id/register_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="姓名："
-            android:inputType="textVisiblePassword" />
+            android:hint="姓名："/>
+            <!--android:inputType="textVisiblePassword" />-->
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
