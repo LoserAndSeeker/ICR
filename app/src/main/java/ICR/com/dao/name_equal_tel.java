@@ -13,6 +13,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
+
 public class name_equal_tel {
     public static int sendLoginRequest(String tel,String sta_name) {
         int request=0;
@@ -20,7 +22,7 @@ public class name_equal_tel {
         HttpURLConnection connection=null;
         BufferedReader reader = null;
         try {
-            URL url = new URL("http://192.168.43.210/ICR_connect/name_equal_tel.php");
+            URL url = new URL(static_connect+"name_equal_tel.php");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(8000);

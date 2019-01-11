@@ -28,10 +28,10 @@ public class havereservedDao extends BaseActivity {
         try {
             URL url;
             if(i==0) {
-                url = new URL("http://192.168.43.210/ICR_connect/havereserved.php");
+                url = new URL(static_connect+"havereserved.php");
             }
             else {
-                url = new URL("http://192.168.43.210/ICR_connect/have_finished.php");
+                url = new URL(static_connect+"have_finished.php");
             }
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");

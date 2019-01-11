@@ -22,7 +22,7 @@ public class UserDao extends BaseActivity{
                 HttpURLConnection connection=null;
                 BufferedReader reader = null;
                 try {
-                    URL url = new URL("http://192.168.43.210/ICR_connect/login.php");
+                    URL url = new URL(static_connect+"login.php");
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);

@@ -39,6 +39,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     //public static  String telnum;
+    public static String static_connect="http://192.168.43.210/ICR_connect/";
     public static String userTel;
     public static String static_user_name;
     public static String static_user_sex;

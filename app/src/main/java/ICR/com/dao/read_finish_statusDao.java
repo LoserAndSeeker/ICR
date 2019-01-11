@@ -18,6 +18,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
+
 public class read_finish_statusDao {
     static JSONObject jsoncontainer=new JSONObject();
     public static  String[][] participatepost(String room_name,String s_time){
@@ -38,7 +40,7 @@ public class read_finish_statusDao {
         String s[][]=new String[1][1];
         s[0][0]="出错了你个菜鸡:execute";
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/readfinishstatus.php";
+        String path=static_connect+"readfinishstatus.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();

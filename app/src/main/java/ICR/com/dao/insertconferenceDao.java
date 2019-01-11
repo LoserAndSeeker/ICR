@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static ICR.com.activity.BaseActivity.static_connect;
 import static ICR.com.activity.BaseActivity.static_user_id;
 
 public class insertconferenceDao {
@@ -39,7 +40,7 @@ public class insertconferenceDao {
     }
     private static void executeHttpPost() {
         HttpURLConnection con=null;
-        String path="http://192.168.43.210/ICR_connect/insertconference.php";
+        String path=static_connect+"insertconference.php";
         try {
             URL url=new URL(path);
             con= (HttpURLConnection) url.openConnection();
