@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import ICR.com.R;
 import ICR.com.dao.UserDao;
@@ -33,17 +34,18 @@ public class LoginActivity extends BaseActivity {
                 request=UserDao.sendLoginRequest(nm,pw);
                 if(request==1)
                 {
-                    userTel=nm;//记录用户名
+                        userTel=nm;//记录用户名
                          if(static_user_isadmin.equals("1")){
-                        Intent intent=new Intent(LoginActivity.this,MainManagerActivity.class);
-                        startActivity(intent);
-                    }
-              else
-                   {
-                       Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
-                startActivity(intent);
-                   }
+                            Intent intent=new Intent(LoginActivity.this,MainManagerActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                             Intent intent = new Intent(LoginActivity.this,  MainActivity.class);
+                            startActivity(intent);
+                         }
                 }
+                else
+                    Toast.makeText(LoginActivity.this,"密码错误或者账号不存在",Toast.LENGTH_SHORT).show();
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {

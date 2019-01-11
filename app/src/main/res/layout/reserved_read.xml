@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ReservedReadActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:text="参会人员"
+        android:textColor="#00cfff"
+        android:textSize="28dp"
+        android:layout_marginBottom="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <SearchView
+            android:id="@+id/search_man2"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            />
+        <EditText
+            android:id="@+id/user_edit2"
+            android:layout_width="282dp"
+            android:layout_height="35dp"
+            android:background="@drawable/layerlist"
+            android:gravity="center_vertical"
+            android:textColor="#ff000000"
+            android:textSize="18sp"
+            android:hint="输入用户名进行添加"
+            />
+
+
+        <ImageButton
+            android:id="@+id/user_import2"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/ic_chevron_right_black_48dp"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/Reserved_info_read"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="365dp"/>
+
+
+
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -94,6 +94,7 @@ public class UserDao extends BaseActivity{
                     static_user_email=emi;
                     static_user_sex=sx;
                     static_user_id=sti;
+                    System.out.println("   登录赋值   id"+sti);
                     static_user_isadmin=isad;
 
 

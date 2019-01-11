@@ -8,12 +8,14 @@ public class Room2 {
     private String size;
     private String status;
     private String place;
+    private String id;
 
-    public Room2(String name,String size,String status,String place){//构造函数
+    public Room2(String name,String size,String status,String place,String id){//构造函数
         this.name = name;
         this.size = size;
         this.status = status;
         this.place = place;
+        this.id=id;
     }
 
     public String getName(){
@@ -29,5 +31,9 @@ public class Room2 {
         return place;
     }
     public void setStatus(String status){this.status = status;}
+
+    public String getId() {
+        return id;
+    }
 }
 

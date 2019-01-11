@@ -59,6 +59,7 @@ public class ReserveActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Room2 room = RoomList.get(position); //定义一个Room2类对象存放点击的那一行的RoomList中的信息
                 Static_Room = room.getName();//获取这个room的名字，传给BaseActivity中的全局变量Static_Room
+                Static_Room_id = room.getId();
                 if(room.getStatus().equals("不可用"))
                     Toast.makeText(ReserveActivity.this,"抱歉，该会议室暂不可用，请重新选择",Toast.LENGTH_SHORT).show();
                 else {
@@ -74,27 +75,34 @@ public class ReserveActivity extends BaseActivity {
     private void initRoomList(){
 
 
-        new Thread(
+      /*  new Thread(
                 new Runnable() {
                     @Override
                     public void run() {
-                        room_info= croom_readDao.sendLoginRequest();
+                        System.out.println("开始获取会议室数据");
+                       room_info= croom_readDao.sendLoginRequest();
 
-                        /*for(int i=0;i<5;i++)
+                       for(int i=0;i<5;i++)
                         {
                             System.out.println("   ：传递数据正常"+room_info[i][0]+"-"+room_info[i][1]+"-"+room_info[i][2]+"-"+room_info[i][3]+"-"+room_info[i][4]+"-"+room_info[i][5]);
-                        }*/
+                        }
 
                         for(int i=0;i<room_info.length;i++){
+                           System.out.println("：   ***开始进入构建UI****"+room_info[i][1]);
                             Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4]);
                             RoomList.add(room);
                         }
 
 
                     }
-                }).start();
-
-
+                }).start();*/
+      room_info= croom_readDao.sendLoginRequest();
+         for(int i=0;i<room_info.length;i++)
+         {
+                System.out.println("：   ***开始进入构建UI****"+room_info[i][1]);
+                Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4],room_info[i][0]);
+                RoomList.add(room);
+         }
     }
 }
 

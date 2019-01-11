@@ -69,7 +69,7 @@ public class TimeSelectActivity extends BaseActivity {
                 Time2 time = TimeList.get(position); //定义一个time类对象存放点击的那一行的TimeList中的信息
                 Static_Clock = time.getTime();//获取这个时间，传给BaseActivity中的全局变量Static_Clock
                 if(time.getCan().equals("可预订")) {
-                    Intent intent = new Intent(TimeSelectActivity.this, SubmitReserveActivity.class);
+                    Intent intent = new Intent(TimeSelectActivity.this, ReserveInformationActivity.class);
                     startActivity(intent);
                 }
                 else
@@ -99,9 +99,15 @@ public class TimeSelectActivity extends BaseActivity {
             int m = mMonth+1;
             month = "0"+m;
         }
+        else{
+            int m = mMonth+1;
+            month += m;
+        }
         if(mDay<10){
             day = "0"+mDay;
         }
+        else
+            day += mDay;
         Static_Date = mYear+"-"+month+"-"+day; //将获取的系统日期给全局变量Static_Date
         date.setText(Static_Date);  //将按钮文本设为选好的日期
         initTimeList();
@@ -115,7 +121,9 @@ public class TimeSelectActivity extends BaseActivity {
 
     //初始化TimeList，即上面提到的提取过程，
     private void initTimeList(){
-        new Thread(
+
+
+    /*    new Thread(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -147,8 +155,35 @@ public class TimeSelectActivity extends BaseActivity {
                             TimeList.add(time);
                         }
                     }
-                }).start();
+                }).start();*/
+                    rs_info= conference_readDao.sendLoginRequest();
+                    //  System.out.println("这是reinfo   ：：："+rs_info[1][4]+"结束时间："+rs_info[1][5]+"room_name:::"+rs_info[1][6]);
+                        TimeList.clear();
+                        for(int j=0;j<Clock.length;j++) {
+                            Time2 time = null;
+                            int flag = 1;
+                            for (int i = 0; i < rs_info.length; i++) {
+                                String date = null, clock1 = null, clock2 = null;
+                                date = getDate(rs_info[i][4]);//会议开始日期
+                                clock1 = getClock(rs_info[i][4]);//会议该日期下开始时间
+                                clock2 = getClock(rs_info[i][5]);//会议该日期下结束时间
+                                //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
+                                // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
+                                if(Static_Room.equals(rs_info[i][6] ) && Static_Date.equals(date)  && Clock[j].equals(clock1+"-"+clock2)){
+                                    flag = 0;
+                                    //System.out.println(rs_info[i][6]+"??"+date+"??"+(clock1+"-"+clock2));
+                                }
 
+                            }
+                            //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
+                            // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
+                            if(flag==1)
+                                time = new Time2(Clock[j],"可预订");
+                            else
+                                time = new Time2(Clock[j],"已预订");
+                            TimeList.add(time);
+
+                        }
     }
 
     /**

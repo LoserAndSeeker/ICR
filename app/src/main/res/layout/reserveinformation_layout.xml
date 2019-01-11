@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ReserveInformationActivity">
+
+    <include layout="@layout/bottomtool" />
+
+
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:text="预定信息"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="17dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonLeft1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_left_grey600_36dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议基本信息"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/name_Left1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议名称" />
+
+    <EditText
+        android:id="@+id/name_Right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="90dp"
+        android:hint="请输入会议名称"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/time_Left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/name_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="预定时间" />
+
+    <TextView
+        android:id="@+id/time_Right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/time_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="2019-01-01" />
+
+    <TextView
+        android:id="@+id/room_Left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/room_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="预订地点" />
+
+    <TextView
+        android:id="@+id/room_Right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/room_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="101会议室" />
+
+    <TextView
+        android:id="@+id/people_Left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/time_Left"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="预订人" />
+
+    <TextView
+        android:id="@+id/people_Right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/people_Right"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="老王" />
+    <TextView
+        android:layout_width="382dp"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="添加参会人员"
+        android:textSize="15sp" />
+
+    <SearchView
+        android:id="@+id/search_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+        android:id="@+id/user_edit"
+        android:layout_width="282dp"
+        android:layout_height="30dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:hint="输入用户名进行添加"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="280dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <ImageButton
+        android:id="@+id/user_import"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="275dp"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_right_black_48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/user_play"
+        android:layout_width="350dp"
+        android:layout_height="140dp"
+        android:gravity="start"
+        android:hint="此处显示已添加成员"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/round"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="315dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <Button
+        android:id="@+id/reserve_push"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/yuan"
+        android:text="提交"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

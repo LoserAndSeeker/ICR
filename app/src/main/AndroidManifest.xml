@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ICR.com">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -31,6 +34,10 @@
             android:name=".activity.RegisterActivity"
             android:label="This is RegisterActivity" />
         <activity
+            android:name=".activity.RecordActivity"
+            android:label="This is RecordActivity"
+            android:launchMode="singleTask"/>
+        <activity
             android:name=".activity.LoginActivity"
             android:label="This is LoginActivity" />
         <activity
@@ -42,17 +49,20 @@
         <activity
             android:name=".activity.IdentifyActivity"
             android:label="This is IdentifyActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".activity.PermissionActivity"
             android:label="This is PermissionActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".activity.StatusActivity"
             android:label="This is StatusActivity" />
         <activity
             android:name=".activity.ReserveActivity"
             android:label="This is ReserveActivity" />
+        <activity
+            android:name=".activity.ReserveInformationActivity"
+            android:label="This is ReserveInformationActivity" />
         <activity
             android:name=".activity.FeedbackActivity"
             android:label="This is FeedbackActivity" />
@@ -75,7 +85,6 @@
         <activity
             android:name=".activity.QRCodeActivity"
             android:label="This is QRCodeActivity" />
-
         <activity
             android:name=".activity.PersonalActivity"
             android:label="This is PersonalActivity"
@@ -84,25 +93,20 @@
             android:name=".activity.InformActivity"
             android:label="This is InformActivity" />
         <activity android:name=".activity.TimeSelectActivity" />
-        <activity android:name=".activity.SubmitReserveActivity"/>
-
-
-
-
-
+        <activity android:name=".activity.SubmitReserveActivity" />
         <activity
             android:name=".activity.suggestionActivity"
             android:label="This is suggestionActivity" />
         <activity
             android:name=".activity.MainManagerActivity"
             android:label="This is MainManagerActivity"
-            android:launchMode="singleTask"/>
-
-
-
-
-
-
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.HaveReservedActivity" />
+        <activity android:name=".activity.HavefinishedActivity" />
+        <activity android:name=".activity.ReservedReadActivity" />
+        <activity
+            android:name=".activity.FinishedReadActivity"
+            android:launchMode="singleTask"></activity>
     </application>
 
 </manifest>

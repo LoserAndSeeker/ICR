@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignInActivity">
+
+    <include layout="@layout/bottomtool" />
+
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/record_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        app:srcCompat="@mipmap/ic_chevron_left_grey600_36dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp"
+        android:text="签到情况"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="220dp"
+        android:background="@android:color/transparent"
+        android:textSize="28sp"
+        android:text="会议记录"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议基本信息"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/record_name_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议名称" />
+
+    <TextView
+        android:id="@+id/record_name_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/record_time_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="预定时间" />
+
+    <TextView
+        android:id="@+id/record_time_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/record_person_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="预订人" />
+
+    <TextView
+        android:id="@+id/record_person_Right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/record_start_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="开始时间" />
+
+    <TextView
+        android:id="@+id/record_start_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+    <TextView
+        android:id="@+id/record_end_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="270dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="结束时间" />
+
+    <TextView
+        android:id="@+id/record_end_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="270dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/record_room_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="310dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议地点" />
+
+    <TextView
+        android:id="@+id/record_room_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="310dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+  />
+    <TextView
+        android:id="@+id/record_summary_left"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="会议摘要" />
+
+    <EditText
+        android:id="@+id/record_summary_right"
+        android:layout_width="282dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:hint="记下你的会议摘要吧"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#aaa"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="390dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/record_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会议视频"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="420dp"
+        android:background="@android:color/background_light"
+        android:drawableLeft="@mipmap/feedback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+      />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -64,8 +64,14 @@ public class StatusActivity extends BaseActivity {
 
     //初始化RoomList，即上面提到的提取过程，将每一个房间的"101","30","可用","行政楼1楼"提取放入RoomList
     private void initRoomList(){
+        room_info= croom_readDao.sendLoginRequest();
+         for(int i=0;i<room_info.length;i++)
+         {
+            Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4],room_info[i][0]);
+            RoomList.add(room);
+         }
 
-        new Thread(
+     /*   new Thread(
                 new Runnable() {
                     @Override
                     public void run() {
@@ -83,7 +89,7 @@ public class StatusActivity extends BaseActivity {
 
 
                     }
-                }).start();
+                }).start();*/
 
     }
 
@@ -116,15 +122,16 @@ public class StatusActivity extends BaseActivity {
                     RoomList.get(x).setStatus("可用");
                     room_info[x][3] = "可用";
                 }
-                new Thread(
+                /*new Thread(
                     new Runnable() {
                         @Override
                         public void run() {
                             conference_set_statusDao.statuspost(RoomList.get(x).getName(),RoomList.get(x).getStatus());
 
                         }
-                }).start();
+                }).start();*/
 
+                conference_set_statusDao.statuspost(RoomList.get(x).getName(),RoomList.get(x).getStatus());
                 adapter.notifyDataSetChanged();//更新预定信息列表
             }
         });
