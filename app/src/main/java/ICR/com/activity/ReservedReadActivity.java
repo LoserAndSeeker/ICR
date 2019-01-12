@@ -84,12 +84,14 @@ public class ReservedReadActivity extends BaseActivity {
 
     private void initRoomList() {
         PersonList.clear();
-         person_info = participate_readDao.participatepost(Static_Room,Static_Date+" "+Static_Clock);
-        for (int i = 0; i <person_info[0].length; i++) {
-            Person2 person = new Person2(person_info[0][i],"删除");
+        if(static_flag==1) {
+            person_info = participate_readDao.participatepost(Static_Room, Static_Date + " " + Static_Clock);
+            for (int i = 0; i < person_info[0].length; i++) {
+                Person2 person = new Person2(person_info[0][i], "删除");
 
-            PersonList.add(person);
-            //System.out.println(person_info[0][0]);
+                PersonList.add(person);
+                //System.out.println(person_info[0][0]);
+            }
         }
     }
 
@@ -107,7 +109,8 @@ public class ReservedReadActivity extends BaseActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 PersonList.remove(x);
-                delete_participateDao.registerpost(Static_Room,Static_Date+" "+Static_Clock,person_name);
+                if(static_flag==1)
+                    delete_participateDao.registerpost(Static_Room,Static_Date+" "+Static_Clock,person_name);
                 adapter.notifyDataSetChanged();//更新预定信息列表
             }
         });

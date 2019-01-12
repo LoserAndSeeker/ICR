@@ -31,7 +31,7 @@ public class ReserveActivity extends BaseActivity {
             {"6","106","30","可用","行政楼5楼"}};*/
 
   //String room_info[][]= croom_readDao.sendLoginRequest();
-    String room_info[][] ;
+
     RoomAdapter adapter;
     ListView listView;
     private ArrayList<Room2> RoomList = new ArrayList<Room2>();
@@ -96,13 +96,15 @@ public class ReserveActivity extends BaseActivity {
 
                     }
                 }).start();*/
-      room_info= croom_readDao.sendLoginRequest();
-         for(int i=0;i<room_info.length;i++)
-         {
-                System.out.println("：   ***开始进入构建UI****"+room_info[i][1]);
-                Room2 room = new Room2(room_info[i][1],room_info[i][2],room_info[i][3],room_info[i][4],room_info[i][0]);
-                RoomList.add(room);
-         }
+        if(static_flag == 1) {
+            static_room_info = croom_readDao.sendLoginRequest();
+        }
+        for (int i = 0; i < static_room_info.length; i++) {
+            System.out.println("：   ***开始进入构建UI****" + static_room_info[i][1]);
+            Room2 room = new Room2(static_room_info[i][1], static_room_info[i][2], static_room_info[i][3], static_room_info[i][4], static_room_info[i][0]);
+            RoomList.add(room);
+        }
+
     }
 }
 

@@ -111,8 +111,8 @@ public class PersonalActivity extends BaseActivity {
                 dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
-                        LogoutDao.logoutPost();
+                        if(static_flag==1)
+                            LogoutDao.logoutPost();
 
                         Intent intent = new Intent(PersonalActivity.this, LoginActivity.class);
                         startActivity(intent);

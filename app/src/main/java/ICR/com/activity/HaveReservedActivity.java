@@ -66,20 +66,20 @@ public class HaveReservedActivity extends BaseActivity {
     private void initReservedList(){
         System.out.println("This is test");
 
+        if(static_flag==1) {
+            reserved_info = havereservedDao.sendLoginRequest(0);
 
-        reserved_info= havereservedDao.sendLoginRequest(0);
-
-        for(int i=0;i<reserved_info.length;i++)
-        {
-            System.out.println("：   ***开始进入预定构建****"+reserved_info[i][1]);
-            //Reserved2类：会议室名称，会议名称，会议id，会议日期，开始时间，结束时间
-            //reserved_info:{会议室名，会议名称，会议id，开始时间，结束时间}
-            String date = null, clock1 = null, clock2 = null;
-            date = getDate(reserved_info[i][3]);//会议开始日期
-            clock1 = getClock(reserved_info[i][3]);//会议该日期下开始时间
-            clock2 = getClock(reserved_info[i][4]);//会议该日期下结束时间
-            Reserved2 reserved = new Reserved2(reserved_info[i][0],reserved_info[i][1],reserved_info[i][2],date,clock1,clock2);
-            ReservedList.add(reserved);
+            for (int i = 0; i < reserved_info.length; i++) {
+                System.out.println("：   ***开始进入预定构建****" + reserved_info[i][1]);
+                //Reserved2类：会议室名称，会议名称，会议id，会议日期，开始时间，结束时间
+                //reserved_info:{会议室名，会议名称，会议id，开始时间，结束时间}
+                String date = null, clock1 = null, clock2 = null;
+                date = getDate(reserved_info[i][3]);//会议开始日期
+                clock1 = getClock(reserved_info[i][3]);//会议该日期下开始时间
+                clock2 = getClock(reserved_info[i][4]);//会议该日期下结束时间
+                Reserved2 reserved = new Reserved2(reserved_info[i][0], reserved_info[i][1], reserved_info[i][2], date, clock1, clock2);
+                ReservedList.add(reserved);
+            }
         }
     }
 }
