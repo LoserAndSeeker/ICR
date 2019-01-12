@@ -134,7 +134,6 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
         app:layout_constraintLeft_toLeftOf="parent"
-
         tools:layout_editor_absoluteY="259dp"
         />
 

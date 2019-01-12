@@ -36,7 +36,7 @@
         <activity
             android:name=".activity.RecordActivity"
             android:label="This is RecordActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".activity.LoginActivity"
             android:label="This is LoginActivity" />
@@ -106,7 +106,8 @@
         <activity android:name=".activity.ReservedReadActivity" />
         <activity
             android:name=".activity.FinishedReadActivity"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.DeveloperActivity"></activity>
     </application>
 
 </manifest>
