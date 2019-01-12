@@ -27,6 +27,8 @@ import java.io.File;
 
 import ICR.com.R;
 import ICR.com.dao.LogoutDao;
+import ICR.com.dao.image_path_postDao;
+import ICR.com.dao.image_path_readDao;
 
 //“我的”界面，详情请对照系统设计文档
 public class PersonalActivity extends BaseActivity {
@@ -49,7 +51,15 @@ public class PersonalActivity extends BaseActivity {
         Button button4 = (Button) findViewById(R.id.button_cancel);
         Button button5 = (Button) findViewById(R.id.buttonPerson);
         Button button_name=(Button) findViewById(R.id.button3);
-        iv_personal_icon=(ImageButton) findViewById(R.id.iv_personal_icon) ;
+        iv_personal_icon=(ImageButton) findViewById(R.id.iv_personal_icon);
+
+
+        String img_path[][] = image_path_readDao.participatepost();//从数据库获取数据并显示
+        if(img_path[0][0]!="null")
+        {
+        android.graphics.Bitmap bmp= android.graphics.BitmapFactory.decodeFile(img_path[0][0]);
+        iv_personal_icon.setImageBitmap(bmp);
+        }
 
 
 
@@ -182,7 +192,7 @@ public class PersonalActivity extends BaseActivity {
             tempUri = FileProvider.getUriForFile(PersonalActivity.this, "com.lt.uploadpicdemo.fileProvider", file);
         } else {
             tempUri = Uri.fromFile(new File(Environment
-                    .getExternalStorageDirectory(), "image.jpg"));
+                        .getExternalStorageDirectory(), "image.jpg"));
         }
         // 指定照片保存路径（SD卡），image.jpg为一个临时文件，每次拍照后这个图片都会被替换
         openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, tempUri);
@@ -242,7 +252,7 @@ public class PersonalActivity extends BaseActivity {
         Bundle extras = data.getExtras();
         if (extras != null) {
             Bitmap photo = extras.getParcelable("data");
-            Log.d(TAG,"setImageToView:"+photo);
+            Log.d("这是设置图片去头像框","setImageToView:"+photo);
             photo = ImageUtils.toRoundBitmap(photo); // 这个时候的图片已经被处理成圆形的了
             iv_personal_icon.setImageBitmap(photo);
             uploadPic(photo);
@@ -261,6 +271,8 @@ public class PersonalActivity extends BaseActivity {
         if(imagePath != null){
             // 拿着imagePath上传了
             // ...
+            image_path_postDao.registerpost(imagePath);
+
             Log.d(TAG,"imagePath:"+imagePath);
         }
     }
