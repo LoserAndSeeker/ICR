@@ -102,7 +102,7 @@ public class conference_record_readDao {
             JSONObject JsonObject = new JSONObject(jsonData);//类似二维数组
 
             JSONArray gradeObject = JsonObject.getJSONArray("participate");
-            String nam[][]=new String[1][5];
+            String nam[][]=new String[1][6];
            // for (int i=0; i < gradeObject.length(); i++)    {
 
                 JSONObject jsonObject = gradeObject.getJSONObject(0);
@@ -113,6 +113,7 @@ public class conference_record_readDao {
                 nam[0][2]=jsonObject.getString("start_time");//员工姓名
                 nam[0][3]=jsonObject.getString("end_time");//员工姓名
                 nam[0][4]=jsonObject.getString("adress");//员工姓名
+                nam[0][5]=jsonObject.getString("sta_name");//员工姓名
              //   nam[0][5]=jsonObject.getString("sta_name");//员工姓名
 //                String english = jsonObject.getString("english");
                 // String chinese = jsonObject.getString("chinese");

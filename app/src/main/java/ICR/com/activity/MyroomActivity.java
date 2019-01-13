@@ -16,6 +16,7 @@ public class MyroomActivity extends AppCompatActivity {
         setContentView(R.layout.myroom_layout);
         Button button1 = (Button) findViewById(R.id.button_reserved);
         Button button2 = (Button) findViewById(R.id.button_finished);
+        Button button3 = (Button) findViewById(R.id.button_joined);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +28,13 @@ public class MyroomActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MyroomActivity.this, HavefinishedActivity.class);
+                startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyroomActivity.this, HaveJoinedActivity.class);
                 startActivity(intent);
             }
         });

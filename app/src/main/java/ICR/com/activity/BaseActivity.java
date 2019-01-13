@@ -49,6 +49,7 @@ public class BaseActivity extends AppCompatActivity {
     public static String static_user_isadmin;
     public static String static_user_id;
     public static String static_confer_id;
+    public static String static_password;
 
     //取"2019-1-1 09:00:00"中的"2019-1-1"
     public static String getDate(String time){

@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -53,14 +54,13 @@ public class PersonalActivity extends BaseActivity {
         Button button_name=(Button) findViewById(R.id.button3);
         iv_personal_icon=(ImageButton) findViewById(R.id.iv_personal_icon);
 
-
-        String img_path[][] = image_path_readDao.participatepost();//从数据库获取数据并显示
-        if(img_path[0][0]!="null")
-        {
-        android.graphics.Bitmap bmp= android.graphics.BitmapFactory.decodeFile(img_path[0][0]);
-        iv_personal_icon.setImageBitmap(bmp);
+        if(static_flag==1) {
+            String img_path[][] = image_path_readDao.participatepost();//从数据库获取数据并显示
+            if (img_path[0][0].equals("null") == false) {
+                android.graphics.Bitmap bmp = android.graphics.BitmapFactory.decodeFile(img_path[0][0]);
+                iv_personal_icon.setImageBitmap(bmp);
+            }
         }
-
 
 
        /* String img_path = "/storage/emulated/0/DCIM/Camera/IMG_20181230_222737.jpg";
@@ -115,20 +115,27 @@ public class PersonalActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(PersonalActivity.this);  //出现一个对话框
-                dialog.setTitle("This is Cancel");
-                dialog.setMessage("确认注销当前账号吗？");
+                dialog.setTitle("您选择注销当前账号");
+                dialog.setMessage("请输入密码，密码正确将注销成功：");
+                final EditText edit = new EditText(PersonalActivity.this);
+                dialog.setView(edit);
                 dialog.setCancelable(false);
-                dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                dialog.setPositiveButton("残忍离开", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        if(static_flag==1)
-                            LogoutDao.logoutPost();
+                        if(edit.getText().toString().equals(static_password)) {
+                            if (static_flag == 1)
+                                LogoutDao.logoutPost();
 
-                        Intent intent = new Intent(PersonalActivity.this, LoginActivity.class);
-                        startActivity(intent);
+                            Intent intent = new Intent(PersonalActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                            showToast(PersonalActivity.this,"注销成功，期待下次光临",1500);
+                        }
+                        else
+                            showToast(PersonalActivity.this,"密码错误，注销失败",1500);
                     }
                 });
-                dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton("手下留情", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -271,7 +278,8 @@ public class PersonalActivity extends BaseActivity {
         if(imagePath != null){
             // 拿着imagePath上传了
             // ...
-            image_path_postDao.registerpost(imagePath);
+            if(static_flag==1)
+                image_path_postDao.registerpost(imagePath);
 
             Log.d(TAG,"imagePath:"+imagePath);
         }

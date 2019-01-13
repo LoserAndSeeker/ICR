@@ -6,12 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.MyroomActivity">
 
-    <include layout="@layout/bottomtool" />
 
 
-    <ICR.com.activity.ToolsLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 
     <!--<Button-->
         <!--android:id="@+id/button_reserved"-->
@@ -43,11 +40,11 @@
         android:id="@+id/button_reserved"
         style="@style/AlertDialog.AppCompat"
         android:layout_width="381dp"
-        android:layout_height="105dp"
+        android:layout_height="80dp"
 
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="192dp"
         android:background="@drawable/myroomshape"
         android:drawableLeft="@mipmap/bell"
         android:drawablePadding="20dp"
@@ -62,14 +59,36 @@
         tools:layout_editor_absoluteY="281dp" />
 
     <Button
-        android:id="@+id/button_finished"
+        android:id="@+id/button_joined"
         style="@style/AlertDialog.AppCompat"
         android:layout_width="381dp"
-        android:layout_height="105dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
 
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/myroomshape"
+        android:drawableLeft="@mipmap/reserved"
+        android:drawablePadding="20dp"
+        android:drawableRight="@mipmap/righttwo"
+        android:gravity="center_vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="5dp"
+        android:text="已加入"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <Button
+        android:id="@+id/button_finished"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="381dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/myroomshape"
         android:drawableLeft="@mipmap/checkcircleone"
         android:drawablePadding="20dp"
@@ -84,6 +103,10 @@
         tools:layout_editor_absoluteY="400dp" />
 
 
+
+    <ICR.com.activity.ToolsLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </RelativeLayout>

@@ -87,6 +87,7 @@ public class RegisterActivity extends BaseActivity {
                 static_user_postition = "总经理";
                 static_user_email = "8008820@163.com";
                 static_user_isadmin = "1";
+                static_password="";
 
                 String[][] info =
                         {{"1","101","30","可用","行政楼1楼"},

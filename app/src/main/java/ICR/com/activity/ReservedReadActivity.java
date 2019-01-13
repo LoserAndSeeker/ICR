@@ -58,6 +58,7 @@ public class ReservedReadActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Person2 person = PersonList.get(position); //定义一个Room2类对象存放点击的那一行的RoomList中的信息
                 //获取这个room的名字，传给BaseActivity中的全局变量Static_Room
+                //if(person.getName().equals(static_user_name))
                 Alert(position,person.getName());
 
             }

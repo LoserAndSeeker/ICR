@@ -62,7 +62,7 @@ public class RecordActivity extends BaseActivity {
         String[][] info = conference_record_readDao.participatepost(Static_Room,Static_Date+" "+Static_Clock);
         record_name.setText(info[0][0]);
         record_time.setText(info[0][1]);
-        record_person.setText(static_user_name);
+        record_person.setText(info[0][5]);
         record_start.setText(info[0][2]);
         record_end.setText(info[0][3]);
         record_room.setText(info[0][4]+" "+Static_Room+"会议室");

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.SignInActivity">
+    tools:context=".activity.JoinedReadActivity">
 
     <include layout="@layout/bottomtool" />
 
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content" />
 
     <ImageButton
-        android:id="@+id/record_back"
+        android:id="@+id/record_back3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/background_light"
@@ -23,26 +23,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/button_signin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="70dp"
-        android:background="@android:color/transparent"
-        android:textSize="28sp"
-        android:text="签到情况"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="140dp"
         android:background="@android:color/transparent"
         android:textSize="28sp"
-        android:text="会议记录"
+        android:text="会议信息"
         android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -68,7 +57,7 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/record_name_left"
+        android:id="@+id/record_name_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -82,7 +71,7 @@
         android:text="会议名称" />
 
     <TextView
-        android:id="@+id/record_name_right"
+        android:id="@+id/record_name_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -96,7 +85,7 @@
         />
 
     <TextView
-        android:id="@+id/record_time_left"
+        android:id="@+id/record_time_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -110,7 +99,7 @@
         android:text="预定时间" />
 
     <TextView
-        android:id="@+id/record_time_right"
+        android:id="@+id/record_time_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -121,10 +110,10 @@
         android:layout_marginTop="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-    />
+        />
 
     <TextView
-        android:id="@+id/record_person_left"
+        android:id="@+id/record_person_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -138,7 +127,7 @@
         android:text="预订人" />
 
     <TextView
-        android:id="@+id/record_person_Right"
+        android:id="@+id/record_person_Right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -151,7 +140,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/record_start_left"
+        android:id="@+id/record_start_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -165,7 +154,7 @@
         android:text="开始时间" />
 
     <TextView
-        android:id="@+id/record_start_right"
+        android:id="@+id/record_start_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -176,9 +165,9 @@
         android:layout_marginTop="230dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-       />
+        />
     <TextView
-        android:id="@+id/record_end_left"
+        android:id="@+id/record_end_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -192,7 +181,7 @@
         android:text="结束时间" />
 
     <TextView
-        android:id="@+id/record_end_right"
+        android:id="@+id/record_end_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -203,10 +192,10 @@
         android:layout_marginTop="270dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        />
 
     <TextView
-        android:id="@+id/record_room_left"
+        android:id="@+id/record_room_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -220,7 +209,7 @@
         android:text="会议地点" />
 
     <TextView
-        android:id="@+id/record_room_right"
+        android:id="@+id/record_room_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -231,9 +220,9 @@
         android:layout_marginTop="310dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-  />
+        />
     <TextView
-        android:id="@+id/record_summary_left"
+        android:id="@+id/record_summary_left2"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -247,7 +236,7 @@
         android:text="会议摘要" />
 
     <EditText
-        android:id="@+id/record_summary_right"
+        android:id="@+id/record_summary_right2"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:background="@drawable/layerlist"
@@ -259,7 +248,7 @@
         android:layout_marginTop="350dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-       />
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -269,21 +258,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/record_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="会议视频"
-        android:textSize="20dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="420dp"
-        android:background="@android:color/background_light"
-        android:drawableLeft="@mipmap/video"
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layerlist"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="390dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-      />
+        android:text="  参会人员：" />
 
+    <TextView
+        android:id="@+id/participate_person_left2"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:gravity="start"
+        android:textSize="22sp"
+        android:background="@drawable/round"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="430dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
 
 

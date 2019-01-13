@@ -230,7 +230,7 @@
         android:layout_width="350dp"
         android:layout_height="140dp"
         android:gravity="start"
-        android:textSize="30sp"
+        android:textSize="22sp"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/round"
         android:layout_marginStart="15dp"
