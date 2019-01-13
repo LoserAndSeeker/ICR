@@ -156,34 +156,36 @@ public class TimeSelectActivity extends BaseActivity {
                         }
                     }
                 }).start();*/
-                    rs_info= conference_readDao.sendLoginRequest();
+                if(static_flag==1) {
+                    rs_info = conference_readDao.sendLoginRequest();
                     //  System.out.println("这是reinfo   ：：："+rs_info[1][4]+"结束时间："+rs_info[1][5]+"room_name:::"+rs_info[1][6]);
-                        TimeList.clear();
-                        for(int j=0;j<Clock.length;j++) {
-                            Time2 time = null;
-                            int flag = 1;
-                            for (int i = 0; i < rs_info.length; i++) {
-                                String date = null, clock1 = null, clock2 = null;
-                                date = getDate(rs_info[i][4]);//会议开始日期
-                                clock1 = getClock(rs_info[i][4]);//会议该日期下开始时间
-                                clock2 = getClock(rs_info[i][5]);//会议该日期下结束时间
-                                //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
-                                // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
-                                if(Static_Room.equals(rs_info[i][6] ) && Static_Date.equals(date)  && Clock[j].equals(clock1+"-"+clock2)){
-                                    flag = 0;
-                                    //System.out.println(rs_info[i][6]+"??"+date+"??"+(clock1+"-"+clock2));
-                                }
-
-                            }
+                    TimeList.clear();
+                    for (int j = 0; j < Clock.length; j++) {
+                        Time2 time = null;
+                        int flag = 1;
+                        for (int i = 0; i < rs_info.length; i++) {
+                            String date = null, clock1 = null, clock2 = null;
+                            date = getDate(rs_info[i][4]);//会议开始日期
+                            clock1 = getClock(rs_info[i][4]);//会议该日期下开始时间
+                            clock2 = getClock(rs_info[i][5]);//会议该日期下结束时间
                             //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
                             // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
-                            if(flag==1)
-                                time = new Time2(Clock[j],"可预订");
-                            else
-                                time = new Time2(Clock[j],"已预订");
-                            TimeList.add(time);
+                            if (Static_Room.equals(rs_info[i][6]) && Static_Date.equals(date) && Clock[j].equals(clock1 + "-" + clock2)) {
+                                flag = 0;
+                                //System.out.println(rs_info[i][6]+"??"+date+"??"+(clock1+"-"+clock2));
+                            }
 
                         }
+                        //如果预定信息列表中会议室id与Static_Room对应上，会议开始时间与Static_Date对应上，
+                        // 会议持续时间与Clock[j]对应上，才可以显示为已预定，否则，显示可预定
+                        if (flag == 1)
+                            time = new Time2(Clock[j], "可预订");
+                        else
+                            time = new Time2(Clock[j], "已预订");
+                        TimeList.add(time);
+
+                    }
+                }
     }
 
     /**

@@ -20,11 +20,12 @@ public class BaseActivity extends AppCompatActivity {
     public static String Static_Clock;//预定功能选择的时间
     public static String Static_Date;//预定功能选择的日期
     public static String Static_Room_id;//预定功能选择的room_id
+    public static String static_room_info[][] ;
     public static String[] Clock= {"08:00:00-09:00:00","09:00:00-10:00:00","10:00:00-11:00:00",
             "11:00:00-12:00:00","12:00:00-13:00:00", "13:00:00-14:00:00",
             "14:00:00-15:00:00","15:00:00-16:00:00","16:00:00-17:00:00",
             "17:00:00-18:00:00","18:00:00-19:00:00","19:00:00-20:00:00"};
-
+    public static int static_flag=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class BaseActivity extends AppCompatActivity {
     public static String static_user_isadmin;
     public static String static_user_id;
     public static String static_confer_id;
+    public static String static_password;
 
     //取"2019-1-1 09:00:00"中的"2019-1-1"
     public static String getDate(String time){

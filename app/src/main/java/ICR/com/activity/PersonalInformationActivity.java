@@ -65,8 +65,9 @@ public class PersonalInformationActivity extends BaseActivity {
              static_user_email=em;
              static_user_sex=esx;
              static_user_postition=eoc;
+             if(static_flag==1)
                 postpersoninfoDao.changepost(esx,eoc,em);
-                finish();
+             finish();
             }
         });
 

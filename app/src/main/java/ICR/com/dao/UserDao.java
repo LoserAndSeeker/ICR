@@ -25,8 +25,8 @@ public class UserDao extends BaseActivity{
                     URL url = new URL(static_connect+"login.php");
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
+                    connection.setConnectTimeout(3000);
+                    connection.setReadTimeout(3000);
                     InputStream in = connection.getInputStream();
                     reader= new BufferedReader((new InputStreamReader(in)));
                     StringBuilder response = new StringBuilder();

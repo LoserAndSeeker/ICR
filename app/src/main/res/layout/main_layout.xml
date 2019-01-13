@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="211dp"
         android:background="@drawable/shapebutton"
-        android:drawableLeft="@mipmap/ic_settings_cell_black_48dp"
+        android:drawableLeft="@mipmap/main"
         android:drawablePadding="10dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"

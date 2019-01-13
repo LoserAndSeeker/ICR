@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_margin="40dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/reserveshape">
     <TextView
         android:id="@+id/room_item_1"
         android:layout_width="match_parent"

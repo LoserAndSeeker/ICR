@@ -5,31 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.ReserveActivity">
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="25dp"
-        android:text="会议室预定"
+        android:text="您已加入"
         android:textColor="#00cfff"
         android:textSize="28dp" />
 
-    <!--<ListView-->
-        <!--android:id="@+id/Reserve_room"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="440dp"/>-->
     <ListView
-        android:id="@+id/Reserve_room"
+        android:id="@+id/HaveJoined_room"
         android:layout_width="match_parent"
-        android:layout_height="440dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#fff"
-        android:divider="#00000000"
-        android:dividerHeight="10dp"/>
-
+        android:layout_margin="20dp"
+        android:layout_height="400dp"/>
 
 
     <ICR.com.activity.ToolsLayout

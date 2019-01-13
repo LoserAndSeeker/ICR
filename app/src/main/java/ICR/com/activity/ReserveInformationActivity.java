@@ -77,11 +77,12 @@ public class ReserveInformationActivity extends BaseActivity{
             public void onClick(View v) {
                     String thename=search_people.getText().toString();
 
-                    if(register_repeat_Dao.sendLoginRequest(thename)==2){
+                    if(static_flag==1&&register_repeat_Dao.sendLoginRequest(thename)==2){
                     namelist[i]=thename;
                     i++;
                     nameall+=thename+" ";
                     user_play.setText(nameall);
+                    search_people.setText("");
                     Toast.makeText(ReserveInformationActivity.this,"成功添加该用户！",Toast.LENGTH_SHORT).show();
                 }
                     else {
@@ -98,11 +99,18 @@ public class ReserveInformationActivity extends BaseActivity{
                 String start=null,end=null;
                 start=getStart(Static_Clock);
                 end = getEnd(Static_Clock);
-                insertconferenceDao.registerpost(preserve_name.getText().toString(),Static_Date+" "+start,Static_Date+" "+end,Static_Room_id);
-                for(int j=0;j<i;j++){
-                    insertparticipateDao.registerpost(Static_Room,Static_Date+" "+Static_Clock,namelist[j]);
+                if(i>0) {
+                    if (static_flag == 1) {
+                        insertconferenceDao.registerpost(preserve_name.getText().toString(), Static_Date + " " + start, Static_Date + " " + end, Static_Room_id);
+                        for (int j = 0; j < i; j++) {
+                            insertparticipateDao.registerpost(Static_Room, Static_Date + " " + Static_Clock, namelist[j]);
+                        }
+                        startActivity(new Intent(ReserveInformationActivity.this, HaveReservedActivity.class));
+                    }
+                }else{
+                    showToast(ReserveInformationActivity.this,"参会人员不能为空，请继续添加",1000);
                 }
-                startActivity(new Intent(ReserveInformationActivity.this,HaveReservedActivity.class));
+
             }
         });
 

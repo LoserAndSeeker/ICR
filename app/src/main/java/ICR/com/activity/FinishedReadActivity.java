@@ -77,7 +77,8 @@ public class FinishedReadActivity extends BaseActivity {
     }
 
     private void initRoomList() {
-        person_info = read_finish_statusDao.participatepost(Static_Room,Static_Date+" "+Static_Clock);
+        if(static_flag == 1)
+            person_info = read_finish_statusDao.participatepost(Static_Room,Static_Date+" "+Static_Clock);
         for (int i = 0; i <person_info.length; i++) {
             Person2 person = new Person2(person_info[i][0],person_info[i][1]);
             PersonList.add(person);

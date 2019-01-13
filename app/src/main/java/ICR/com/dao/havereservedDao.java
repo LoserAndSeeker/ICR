@@ -30,9 +30,10 @@ public class havereservedDao extends BaseActivity {
             if(i==0) {
                 url = new URL(static_connect+"havereserved.php");
             }
-            else {
+            else if(i==1){
                 url = new URL(static_connect+"have_finished.php");
-            }
+            }else
+                url = new URL(static_connect+"havejoined.php");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(8000);

@@ -18,6 +18,8 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
+        //static_connect="http://192.168.43.210/ICR_connect/";
+        static_flag=1;
         hindBar();
 
         Button button1 = (Button) findViewById(R.id.button_main);  //登录
@@ -31,6 +33,7 @@ public class LoginActivity extends BaseActivity {
                 int request=0;
                 String nm=user.getText().toString();
                 String pw=password.getText().toString();
+                static_password = pw;
                 request=UserDao.sendLoginRequest(nm,pw);
                 if(request==1)
                 {
