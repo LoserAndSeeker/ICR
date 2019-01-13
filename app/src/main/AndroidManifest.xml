@@ -39,7 +39,8 @@
             android:launchMode="singleTask" />
         <activity
             android:name=".activity.LoginActivity"
-            android:label="This is LoginActivity" />
+            android:label="This is LoginActivity"
+            android:launchMode="singleTask" />
         <activity
             android:name=".activity.PasswordRelativeActivity"
             android:label="This is PasswordRelativeActivity" />
